@@ -1,16 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import SocialContainer from "../components/SocialContainer.astro"
+import SocialContainer from "../components/SocialContainer.astro";
+import Experience from "../components/Experience.astro"
+import StudiesIcon from '../icons/StudiesIcon.astro'
 
 ---
 
-<Layout title="Alberto Ramos Portfolio - Web Developer and Programmer"
-description="Hire Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications.">
+<Layout
+  title="Alberto Ramos Portfolio | Web Developer and Programmer"
+  description="Hire Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-32">
+    <section id="top" class="w-full mx-auto lg:w-[740px] py-40">
       <img
-        class="rounded-full w-20 h-20 mb-5"
+        class="rounded-full size-20 mb-5"
         src="https://avatars.githubusercontent.com/u/73201347?v=4"
         alt="alberto photo"
       />
@@ -32,8 +36,14 @@ description="Hire Alberto Ramos: a dynamic web developer driven by a passion for
         <span class="text-red-300/90"> From Barcelona, Spain.</span>
       </h2>
 
-      <SocialContainer class="flex gap-x-2">
-      </SocialContainer>
+      <SocialContainer class="flex gap-x-2" />
+    </section>
+
+		<!--Education -->
+    <section id="education" class="w-full mx-auto lg:w-[740px]">
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-3 items-center">
+				<StudiesIcon />Education</h2>
+      <Experience />
     </section>
   </main>
 </Layout>

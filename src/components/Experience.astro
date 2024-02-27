@@ -1,0 +1,31 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro'
+const EXPERIENCE=[
+  {
+    date: 'September 2023 - June 2024',
+    title: 'Web Developer',
+    location: 'Open Class Rooms | France - Online',
+    link: 'https://openclassrooms.com/en/paths/900-integrateur-web',
+    description: 'Intensive web developer program encompassed 603 hours of supervised learning, focusing on the development of practical skills essential for the industry.'
+  },
+  {
+    date: 'April 2023 - Present',
+    title: 'Self-taught Web Developer',
+    location: ' The Odin Project | Online',
+    link: "https://www.theodinproject.com/dashboard",
+    description: 'Open-source curriculum for learning web development. It offers a hands-on approach with practical projects. Very popular among self-taught developers'
+  },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map(experience =>(
+      <li class="mb-20 ms-4">
+        <ExperienceItem {... experience}/>
+        </li>
+    ))
+  }
+</ol>
+
