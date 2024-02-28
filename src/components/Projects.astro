@@ -1,0 +1,70 @@
+---
+import ReactIcon from '../icons/ReactIcon.astro';
+import StylesComponentsIcon from '../icons/StyledComponentsIcon.astro';
+import Astroicon from '../icons/AstroIcon.astro'
+import TailwindIcon from '../icons/TailwindIcon.astro'
+
+
+const TAGS = {
+  REACT: {
+    name: 'React',
+    class: 'bg-blue-900 text-white border-2 border-blue-400',
+    icon: ReactIcon,
+  },
+  STYLEDCOMPONENTS:{
+    name: 'Styled Components',
+    class: 'bg-pink-400 text-black text border-2 border-pink-700',
+    icon: StylesComponentsIcon,
+  },
+  ASTRO:{
+    name: 'Astro',
+    class: 'background-black text-white border-2 border-orange-600',
+    icon: Astroicon,
+  },
+  TAILWIND:{
+    name: 'Tailwind',
+    class: 'bg-gray-800 text-[#73bcf6] border-2 border-blue-500 ',
+    icon: TailwindIcon,
+  }
+}
+
+const PROJECTS =[
+  {
+    title: 'Toolsadd |',
+    subtitle: ' Your Gateway to Dev Web Resources', 
+    description: "Created from scratch, Toolsadd is a user-friendly web application designed to serve as your centralized hub for accessing a curated collection of useful websites. With a sleek and intuitive interface, Toolsadd empowers users to effortlessly discover and explore a diverse range of online resources across various categories.",
+    link:'#',
+    github: "#",
+    image:  "/projects/toolsadd.webp",
+    tags: [TAGS.REACT, TAGS.STYLEDCOMPONENTS],
+  },
+  {
+    title: 'Project 2 | ',
+    subtitle: 'Subtitle',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    link:'#',
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.ASTRO]
+  }
+]
+---
+
+{
+  PROJECTS.map(({title, subtitle, description, tags, image}) =>(
+    <article class="pb-14 pt-14 border-b border-white-400">
+      <h3 class="text-2xl font-semibold text-yellow-100 mb-2">{title}<span class="text-blue-200">{subtitle}</span></h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex flex-row gap-x-8 mb-8">
+        {tags.map(tag =>(
+         <li>
+          <span class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-xs py-1 px-3`}>
+          <tag.icon class="size-6"></tag.icon>{tag.name}
+          </span>
+          </li>
+        ))}</ul>
+          <img src={image} alt={`Screenshot from project ${title}`}
+          class="rounded shadow-2xl shadow-white/20" />
+      </article>
+  ))
+}
