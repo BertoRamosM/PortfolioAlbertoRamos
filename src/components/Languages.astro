@@ -1,0 +1,24 @@
+---
+const spanish = 'https://hatscripts.github.io/circle-flags/flags/es-variant.svg'
+const catalan = 'https://hatscripts.github.io/circle-flags/flags/es-ct.svg'
+const english = 'https://hatscripts.github.io/circle-flags/flags/gb.svg'
+const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg"
+
+const LanguagesList = [
+  spanish, catalan, english, french
+]
+---
+
+
+<div class="w-full flex justify-center mt-9 border-b border-white-400">
+  <div
+    class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12"
+  >
+ {LanguagesList.map((language) => (
+      <div class="m-2">
+        <img src={language} class="size-12"/>
+      </div>
+    ))}
+
+  </div>
+</div>
