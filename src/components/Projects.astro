@@ -3,6 +3,8 @@ import ReactIcon from '../icons/ReactIcon.astro';
 import StylesComponentsIcon from '../icons/StyledComponentsIcon.astro';
 import Astroicon from '../icons/AstroIcon.astro'
 import TailwindIcon from '../icons/TailwindIcon.astro'
+import Github from '../icons/Github.astro'
+import Live from '../icons/Live.astro'
 
 
 const TAGS = {
@@ -33,8 +35,9 @@ const PROJECTS =[
     title: 'Toolsadd |',
     subtitle: ' Your Gateway to Dev Web Resources', 
     description: "Created from scratch, Toolsadd is a user-friendly web application designed to serve as your centralized hub for accessing a curated collection of useful websites. With a sleek and intuitive interface, Toolsadd empowers users to effortlessly discover and explore a diverse range of online resources across various categories.",
-    link:'#',
-    github: "#",
+    state: 'In progress',
+    link:'https://toolsadd.netlify.app/',
+    github: "https://github.com/BertoRamosM/ToolsAdd",
     image:  "/projects/toolsadd.webp",
     tags: [TAGS.REACT, TAGS.STYLEDCOMPONENTS],
   },
@@ -42,6 +45,7 @@ const PROJECTS =[
     title: 'Project 2 | ',
     subtitle: 'Subtitle',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    state: 'Finished',
     link:'#',
     github: "#",
     image: "https://via.placeholder.com/300x200",
@@ -51,9 +55,9 @@ const PROJECTS =[
 ---
 
 {
-  PROJECTS.map(({title, subtitle, description, tags, image}) =>(
-    <article class="pb-14 pt-14 border-b border-white-400">
-      <h3 class="text-2xl font-semibold text-yellow-100 mb-2">{title}<span class="text-blue-200">{subtitle}</span></h3>
+  PROJECTS.map(({title, subtitle, state, description, tags, image, github, link}) =>(
+    <article class="pb-20 pt-14">
+      <h3 class="text-3xl font-semibold text-yellow-100 mb-2">{title}<span class="text-blue-200 text-2xl">{subtitle}</span></h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex flex-row gap-x-8 mb-8">
         {tags.map(tag =>(
@@ -63,8 +67,37 @@ const PROJECTS =[
           </span>
           </li>
         ))}</ul>
+        <div class="relative">
           <img src={image} alt={`Screenshot from project ${title}`}
           class="rounded shadow-2xl shadow-white/20" />
+          {state === 'In progress' ? (
+                  <span class="absolute top-3 right-3 bg-black bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-orange-400">
+                  {state}
+                    </span>
+                 ) : (
+                  <span class="absolute top-3 right-3 bg-black bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-blue-500">
+                  {state}
+                    </span>
+                 ) }
+</div>
+<nav class="flex gap-4 pt-2 align-center  mt-8 flex-wrap">
+<a
+  href={link}
+  target="_blank"
+  class="rounded-full border border-white/10 gap-x-3
+  py-2 px-3 bg-white/10 hover:scale-110 hover:bg-white/10 transition flex item-center justify-center"
+>
+  <Live class="size-6" />
+  Preview
+</a>
+<a href={github} target="_blank"
+class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-110 hover:bg-white/10 transition flex item-center">
+  <Github class="size-5" />
+  Github
+</a>
+
+  
+</nav>
       </article>
   ))
 }
