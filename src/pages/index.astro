@@ -12,6 +12,8 @@ import LanguagesIcon from '../icons/LanguagesIcon.astro'
 import Languages from '../components/Languages.astro'
 import UserIcon from '../icons/UserIcon.astro'
 import About from '../components/About.astro'
+import Contact from '../components/Contact.astro'
+import ContactIcon from '../icons/ContactIcon.astro'
 ---
 
 <Layout
@@ -76,10 +78,17 @@ import About from '../components/About.astro'
     </section>
 
 		<!--Languages -->
-		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-10">
+		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-5">
 			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
 				<LanguagesIcon class="size-9"/>Languages</h2>
      <Languages />
+    </section>
+
+    <!--Contact -->
+		<section id='contact' class="w-full mx-auto lg:w-[740px] pt-10">
+			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center">
+				<ContactIcon class="size-9"/>Contact me</h2>
+     <Contact />
     </section>
   </main>
 </Layout>
