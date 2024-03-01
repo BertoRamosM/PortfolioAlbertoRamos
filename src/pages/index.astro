@@ -10,6 +10,8 @@ import TechIcon from '../icons/TechIcon.astro'
 import Technology from '../components/Technology.astro'
 import LanguagesIcon from '../icons/LanguagesIcon.astro'
 import Languages from '../components/Languages.astro'
+import UserIcon from '../icons/UserIcon.astro'
+import About from '../components/About.astro'
 ---
 
 <Layout
@@ -21,7 +23,7 @@ import Languages from '../components/Languages.astro'
       <img
         class="rounded-full size-20 mb-5"
         src="https://avatars.githubusercontent.com/u/73201347?v=4"
-        alt="alberto photo"
+        alt="picture of Alberto Ramos"
       />
       <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Alberto Ramos<a
@@ -58,16 +60,24 @@ import Languages from '../components/Languages.astro'
       <Projects />
     </section>
 
+		<!--About me -->
+		<section id="about" class="w-full mx-auto lg:w-[740px] pb-10">
+			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+				<UserIcon class="size-10"/>About me</h2>
+    <About >
+	
+    </section>
+
 		<!--Technologies -->
 		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-10">
-			<h2 class="text-3xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
 				<TechIcon class="size-9"/>Technologies</h2>
      <Technology />
     </section>
 
 		<!--Languages -->
 		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-10">
-			<h2 class="text-3xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
 				<LanguagesIcon class="size-9"/>Languages</h2>
      <Languages />
     </section>
