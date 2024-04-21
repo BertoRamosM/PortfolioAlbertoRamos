@@ -54,34 +54,36 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "Toolsadd |",
+    title: "Forgweb |",
     subtitle: " Your Gateway to Dev Web Resources",
     description:
-      "User-friendly web application designed to serve as your centralized hub for accessing a curated collection of useful websites. With a sleek and intuitive interface, Toolsadd empowers users to effortlessly discover and explore a diverse range of online resources across various categories.",
+      "User-friendly web application designed to serve as your centralized hub for accessing a curated collection of useful websites. With a sleek and intuitive interface, Forgweb empowers users to effortlessly discover and explore a diverse range of online resources across various categories. Still more resources and features to be added in the future",
     state: "In progress",
-    link: "https://toolsadd.netlify.app/",
-    github: "https://github.com/BertoRamosM/ToolsAdd",
-    image: "/projects/toolsadd.webp",
+    link: "https://app.netlify.com/sites/forgweb/",
+    github: "https://github.com/BertoRamosM/Forgweb",
+    image: "/projects/Forgweb.webp",
     tags: [TAGS.REACT, TAGS.Redux, TAGS.STYLEDCOMPONENTS],
   },
   {
     title: "Quizzo | ",
-    subtitle: "Subtitle",
+    subtitle: "Test Your Front-End Skills",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Quizzo is a quiz application focused on front-end development topics. It features a variety of questions aimed at refreshing and reinforcing knowledge in the field. The application utilizes Zustand as a global state manager, MaterialUI for creating visually appealing components and also I have created an small website in github to store the json data for the questions and fetch it.",
     state: "Finished",
-    link: "#",
+    link: "https://quizzo-berto.netlify.app/",
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",
     tags: [TAGS.REACT, TAGS.TypeScript, TAGS.Zustand, TAGS.MaterialUI],
   },
   {
     title: "Argent Bank | ",
-    subtitle: "Subtitle",
-    description: "consolidate react",
+    subtitle: "",
+    description:
+      "Argent Bank was the last project of my formation with Open Class Rooms. Was a comprehensive project to learn managing front-end development tasks, with a particular focus on React and Redux/Redux Toolkit and API calls to the backend. The project aimed to consolidate various aspects of front-end development.",
     state: "Finished",
-    link: "#",
-    github: "https://github.com/BertoRamosM/Quizzo",
+    link: undefined,
+    github:
+      "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
     image: "/projects/Argent.webp",
     tags: [TAGS.REACT, TAGS.Redux],
   },
@@ -127,15 +129,18 @@ const PROJECTS = [
           )}
         </div>
         <nav class="flex gap-4 pt-2 align-center  mt-8 flex-wrap ">
-          <a
-            href={link}
-            target="_blank"
-            class="rounded-full border border-white/10 gap-x-3
+          {link != undefined ? (
+            <a
+              href={link}
+              target="_blank"
+              class="rounded-full border border-white/10 gap-x-3
   py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex item-center justify-center hover:text-purple-300"
-          >
-            <Live class="size-6" />
-            Preview
-          </a>
+            >
+              <Live class="size-6" />
+              Preview
+            </a>
+          ) : null}
+
           <a
             href={github}
             target="_blank"
