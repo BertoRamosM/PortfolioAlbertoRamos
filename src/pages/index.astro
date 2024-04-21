@@ -2,19 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SocialContainer from "../components/SocialContainer.astro";
-import Experience from "../components/Experience.astro"
-import StudiesIcon from '../icons/StudiesIcon.astro'
-import CodeIcon from '../icons/CodeIcon.astro'
-import Projects from '../components/Projects.astro'
-import TechIcon from '../icons/TechIcon.astro'
-import Technology from '../components/Technology.astro'
+import Experience from "../components/Experience.astro";
+import StudiesIcon from "../icons/StudiesIcon.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+import TechIcon from "../icons/TechIcon.astro";
+import Technology from "../components/Technology.astro";
 
-import Languages from '../components/Languages.astro'
-import UserIcon from '../icons/UserIcon.astro'
-import About from '../components/About.astro'
-import Contact from '../components/Contact.astro'
-import ContactIcon from '../icons/ContactIcon.astro'
-import LanguagesIcon from "../icons/LanguagesIcon.astro";
+import Languages from "../components/Languages.astro";
+import UserIcon from "../icons/UserIcon.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import ContactIcon from "../icons/ContactIcon.astro";
+import LanguageIcon from "../icons/LanguageIcon.astro";
 ---
 
 <Layout
@@ -28,7 +28,9 @@ import LanguagesIcon from "../icons/LanguagesIcon.astro";
         src="https://avatars.githubusercontent.com/u/73201347?v=4"
         alt="picture of Alberto Ramos"
       />
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Alberto Ramos<a
           href="https://www.linkedin.com/in/alberto-ramos-munoz-372000105/"
           target="_blank"
@@ -46,50 +48,59 @@ import LanguagesIcon from "../icons/LanguagesIcon.astro";
         <span class="text-red-300/90"> From Barcelona, Spain.</span>
       </h2>
 
-      <SocialContainer class="flex gap-x-2  flex-wrap" />
+      <SocialContainer class="flex gap-x-2 flex-wrap" />
     </section>
 
-		<!--Education -->
+    <!--Education -->
     <section id="education" class="w-full mx-auto lg:w-[740px]">
-			<h2 class="text-3xl font-semibold mb-16 flex gap-x-3 items-center">
-				<StudiesIcon />Education</h2>
+      <h2 class="text-3xl font-semibold mb-16 flex gap-x-3 items-center">
+        <StudiesIcon />Education
+      </h2>
       <Experience />
     </section>
 
-			<!--Projects -->
+    <!--Projects -->
     <section id="projects" class="w-full mx-auto lg:w-[740px]">
-			<h2 class="text-3xl font-semibold mt-40 flex gap-x-3 items-center">
-				<CodeIcon class="size-7"/>Projects</h2>
+      <h2 class="text-3xl font-semibold mt-40 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />Projects
+      </h2>
       <Projects />
     </section>
 
-		<!--About me -->
-		<section id="about" class="w-full mx-auto lg:w-[740px] pb-10">
-			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
-				<UserIcon class="size-10"/>About me</h2>
-    <About >
-	
-    </section>
+    <!--About me -->
+    <section id="about" class="w-full mx-auto lg:w-[740px] pb-10">
+      <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+        <UserIcon class="size-10" />About me
+      </h2>
+      <About />
 
-		<!--Technologies -->
-		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-10">
-			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
-				<TechIcon class="size-9"/>Technologies</h2>
-     <Technology />
-    </section>
+      <!--Technologies -->
+      <section
+        class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-10"
+      >
+        <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+          <TechIcon class="size-9" />Technologies
+        </h2>
+        <Technology />
+      </section>
 
-		<!--Languages -->
-		<section class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-5">
-			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
-				<LanguagesIcon class="size-9"/>Languages</h2>
-     <Languages />
-    </section>
+      <!--Languages -->
+      <section
+        class="w-full mx-auto lg:w-[740px] shadow-lg shadow-blue-200/20 pb-5"
+      >
+        <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center pb-5">
+          <LanguageIcon class="size-9" />Languages
+        </h2>
+        <Languages />
+      </section>
 
-    <!--Contact -->
-		<section id='contact' class="w-full mx-auto lg:w-[740px] pt-10">
-			<h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center">
-				<ContactIcon class="size-9"/>Contact me</h2>
-     <Contact />
+      <!--Contact -->
+      <section id="contact" class="w-full mx-auto lg:w-[740px] pt-10">
+        <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center">
+          <ContactIcon class="size-9" />Contact me
+        </h2>
+        <Contact />
+      </section>
     </section>
   </main>
 </Layout>
