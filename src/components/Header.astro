@@ -19,13 +19,17 @@ import {
     .nav-link {
       font-size: 0.60rem;
     }
+    header > *{
+      gap: 1rem;
+    }
+    
   }
 </style>
 
   <header
     class="flex justify-center py-6 sm:py-5 sm:px-10 mx-auto sticky top-0 z-50 bg-gray-900 rounded bg-opacity-50 px-2"
   >
-    <nav class="flex flex-row justify-center items-center gap-x-10 opacity-90 ">
+    <nav class="flex flex-row justify-center items-center gap-x-10 opacity-90 relative">
       <a
         href="#education"
         class="hover:underline hover:text-purple-300 nav-link">Education</a
@@ -50,7 +54,7 @@ import {
           <DropdownItems>
             <div class="">
               <ul>
-                <div class="flex justify-center w-[30%] absolute right-4">
+                <div class="flex justify-center  absolute right-4">
                   {
                     LanguagesList.map((language) => (
                       <div class="mx-2 my-1">
