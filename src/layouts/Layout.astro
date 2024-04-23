@@ -25,8 +25,13 @@ interface Props {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="relative">
+
+  <body
+    class="relative top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
+  >
     <div class="relative h-full w-full bg-white"></div>
+
+    <div class="absolute"></div>
 
     <Header />
     <slot />
@@ -48,7 +53,6 @@ interface Props {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
   }
 
   @media (prefers-reduced-motion: reduce) {
