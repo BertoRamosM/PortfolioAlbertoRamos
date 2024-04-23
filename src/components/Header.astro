@@ -1,5 +1,5 @@
 ---
-import ArrowDown from "../icons/ArrowDown.astro";
+import HeaderLang from "../icons/HeaderLang.astro";
 const spanish =
   "https://hatscripts.github.io/circle-flags/flags/es-variant.svg";
 const catalan = "https://hatscripts.github.io/circle-flags/flags/es-ct.svg";
@@ -14,68 +14,65 @@ import {
   Dropdown,
   DropdownItems,
   DropdownSubmenu,
+  OpenIcon,
+  CloseIcon,
 } from "astro-navbar";
 ---
 
-<div
-  class="flex justify-center py-6 sm:py-5 px-0 sm:px-10 mx-auto sticky top-0 z-50 bg-gray-900 rounded bg-opacity-50"
->
-  <Astronav>
-    <nav class="flex flex-row gap-x-10 opacity-90">
-      <a href="#education" class="hover:underline hover:text-purple-300"
-        >Education</a
+<style>
+  @media screen and (max-width: 530px) {
+    .nav-link {
+      font-size: 0.65rem;
+    }
+  }
+</style>
+
+  <header
+    class="flex justify-center py-6 sm:py-5 px-0 sm:px-10 mx-auto sticky top-0 z-50 bg-gray-900 rounded bg-opacity-50"
+  >
+    <nav class="flex flex-row justify-center items-center gap-x-10 opacity-90">
+      <a
+        href="#education"
+        class="hover:underline hover:text-purple-300 nav-link">Education</a
       >
-      <a href="#projects" class="hover:underline hover:text-purple-300"
+      <a href="#projects" class="hover:underline hover:text-purple-300 nav-link"
         >Projects</a
       >
-      <a href="#about" class="hover:underline hover:text-purple-300">About</a>
-      <a href="#contact" class="hover:underline hover:text-purple-300"
+      <a href="#about" class="hover:underline hover:text-purple-300 nav-link"
+        >About</a
+      >
+      <a href="#contact" class="hover:underline hover:text-purple-300 nav-link"
         >Contact</a
       >
-      <!-- 
-      <div class="flex flex-wrap justify-center max-w-screen-lg">
-        {
-          LanguagesList.map((language) => (
-            <div class="mx-2 my-1">
-              <img src={language} alt={`${language} flag`} class="size-4" />
-            </div>
-          ))
-        }
-      </div> -->
 
-      <div>
-        <Astronav>
-          <Dropdown class="group">
-            <button>
-              <span class="hover:underline hover:text-purple-300"
-                > <p>Languages</p></p><ArrowDown />
-              </span>
-            </button>
-            <DropdownItems>
-              <div class="">
-                <ul>
-                  <div
-                    class="flex flex-wrap justify-center w-[30%] absolute right-4"
-                  >
-                    {
-                      LanguagesList.map((language, index) => (
-                        <div class="mx-2 my-1">
-                          <img
-                            src={language}
-                            alt={`${language} flag`}
-                            class="size-4"
-                          />
-                        </div>
-                      ))
-                    }
-                  </div>
-                  <li></li>
-                </ul>
-              </div>
-            </DropdownItems>
-          </Dropdown>
-        </Astronav>
-      </div>
+      <Astronav>
+        <Dropdown>
+          <button>
+            <p class="hover:underline hover:text-purple-300 nav-link">
+              Languages
+            </p>
+          </button>
+          <DropdownItems>
+            <div class="">
+              <ul>
+                <div class="flex justify-center w-[30%] absolute right-4">
+                  {
+                    LanguagesList.map((language) => (
+                      <div class="mx-2 my-1">
+                        <img
+                          src={language}
+                          alt={`${language} flag`}
+                          class="size-4"
+                        />
+                      </div>
+                    ))
+                  }
+                </div>
+                <li></li>
+              </ul>
+            </div>
+          </DropdownItems>
+        </Dropdown>
+      </Astronav>
     </nav>
-  </Astronav>
-</div>
+  </header>
