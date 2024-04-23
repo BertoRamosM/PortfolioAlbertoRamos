@@ -9,28 +9,23 @@ const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg";
 const LanguagesList = [spanish, catalan, english, french];
 import {
   Astronav,
-  MenuItems,
-  MenuIcon,
   Dropdown,
   DropdownItems,
-  DropdownSubmenu,
-  OpenIcon,
-  CloseIcon,
 } from "astro-navbar";
 ---
 
 <style>
   @media screen and (max-width: 530px) {
     .nav-link {
-      font-size: 0.65rem;
+      font-size: 0.60rem;
     }
   }
 </style>
 
   <header
-    class="flex justify-center py-6 sm:py-5 px-0 sm:px-10 mx-auto sticky top-0 z-50 bg-gray-900 rounded bg-opacity-50"
+    class="flex justify-center py-6 sm:py-5 sm:px-10 mx-auto sticky top-0 z-50 bg-gray-900 rounded bg-opacity-50 px-2"
   >
-    <nav class="flex flex-row justify-center items-center gap-x-10 opacity-90">
+    <nav class="flex flex-row justify-center items-center gap-x-10 opacity-90 ">
       <a
         href="#education"
         class="hover:underline hover:text-purple-300 nav-link">Education</a
@@ -48,7 +43,7 @@ import {
       <Astronav>
         <Dropdown>
           <button>
-            <p class="hover:underline hover:text-purple-300 nav-link">
+            <p class="hover:underline hover:text-purple-300 nav-link py-2">
               Languages
             </p>
           </button>
