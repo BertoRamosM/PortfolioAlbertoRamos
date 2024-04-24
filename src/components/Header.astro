@@ -12,16 +12,21 @@ import { Astronav, Dropdown, DropdownItems } from "astro-navbar";
 <style>
   @media screen and (max-width: 530px) {
     .nav-link {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
     header > * {
       gap: 1rem;
+    }
+    @media screen and (max-width: 335px) {
+      .nav-link {
+        font-size: 0.6rem;
+      }
     }
   }
 </style>
 
 <header
-  class="flex justify-center py-6 sm:py-5 sm:px-10 mx-auto sticky top-0 left-0  z-50 bg-black rounded-2xl bg-opacity-50 px-2 lg:right-0"
+  class="flex justify-center py-6 sm:py-5 sm:px-10 mx-auto fixed top-0 left-5 right-5 z-50 bg-gray-900 rounded-2xl bg-opacity-65 px-2 max-w-max"
 >
   <nav
     class="flex flex-row justify-center items-center gap-x-10 opacity-90 relative"
