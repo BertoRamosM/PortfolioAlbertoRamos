@@ -1,14 +1,15 @@
 ---
-const spanish = 'https://hatscripts.github.io/circle-flags/flags/es-variant.svg';
-const catalan = 'https://hatscripts.github.io/circle-flags/flags/es-ct.svg';
-const english = 'https://hatscripts.github.io/circle-flags/flags/gb.svg';
-const french = 'https://hatscripts.github.io/circle-flags/flags/fr.svg';
+const spanish =
+  "https://hatscripts.github.io/circle-flags/flags/es-variant.svg";
+const catalan = "https://hatscripts.github.io/circle-flags/flags/es-ct.svg";
+const english = "https://hatscripts.github.io/circle-flags/flags/gb.svg";
+const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg";
 
 const LanguagesList = [
-  { flag: spanish, name: 'Spanish' },
-  { flag: catalan, name: 'Catalan' },
-  { flag: english, name: 'English' },
-  { flag: french, name: 'French' },
+  { flag: spanish, name: "Spanish" },
+  { flag: catalan, name: "Catalan" },
+  { flag: english, name: "English" },
+  { flag: french, name: "French" },
 ];
 ---
 
@@ -29,7 +30,7 @@ const LanguagesList = [
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -38,15 +39,33 @@ const LanguagesList = [
   .flag-container:hover .language-text {
     opacity: 1;
   }
+  @media (max-width: 768px) {
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .icon-text {
+      font-size: 1.2rem;
+    }
+  }
 </style>
 
 <div class="w-full flex justify-center mt-9">
-  <div class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12">
-    {LanguagesList.map((language, index) => (
-      <div class="m-2 flag-container">
-        <img src={language.flag} alt={`${language.name} flag`} class="size-12" />
-        <div class="language-text text-white">{language.name}</div>
-      </div>
-    ))}
+  <div
+    class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12"
+  >
+    {
+      LanguagesList.map((language, index) => (
+        <div class="m-2 flag-container">
+          <img
+            src={language.flag}
+            alt={`${language.name} flag`}
+            class="size-12 icon"
+          />
+          <div class="language-text text-white icon-text">{language.name}</div>
+        </div>
+      ))
+    }
   </div>
 </div>

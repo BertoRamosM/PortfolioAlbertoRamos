@@ -48,7 +48,7 @@ const ICONS = [
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     opacity: 0;
     transition: opacity 0.3s ease;
     font-family: "Roboto", sans-serif;
@@ -56,6 +56,17 @@ const ICONS = [
 
   .icon-container:hover .icon-text {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .icon-text {
+      font-size: 1.2rem; 
+    }
   }
 </style>
 
