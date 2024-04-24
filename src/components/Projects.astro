@@ -8,75 +8,84 @@ import Live from "../icons/Live.astro";
 import MaterialUI from "../icons/MaterialUI.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import ReduxIcon from "../icons/ReduxIcon.astro";
+import ZustandIcon from "../icons/ZustandIcon.astro";
 
-const TAGS = {
+const TECHS = {
   REACT: {
     name: "React",
     class: "bg-blue-900 text-white border-2 border-blue-400",
     icon: ReactIcon,
+    link: "https://react.dev/",
   },
   STYLEDCOMPONENTS: {
-    name: "Styled Components",
-    class: "bg-red-300 text-black text border-2 border-pink-700",
+    name: "StyledC",
+    class: "bg-pink-400 text-black text border-2 border-pink-700",
     icon: StylesComponentsIcon,
+    link: "https://styled-components.com/",
   },
   ASTRO: {
     name: "Astro",
     class: "background-black text-white border-2 border-orange-600",
     icon: Astroicon,
+    link: "https://astro.build/",
   },
   TAILWIND: {
     name: "Tailwind",
     class: "bg-gray-800 text-[#73bcf6] border-2 border-blue-500 ",
     icon: TailwindIcon,
+    link: "https://tailwindcss.com/",
   },
   MaterialUI: {
     name: "MaterialUI",
     class: "bg-gray-800 text-[#73bcf6] border-2 border-blue-500 ",
     icon: MaterialUI,
+    link: "https://mui.com/",
   },
   TypeScript: {
     name: "TypeScript",
     class: "bg-white text-blue-800 border-2 border-blue-500 ",
     icon: TypeScript,
+    link: "https://www.typescriptlang.org/",
   },
   Redux: {
     name: "Redux",
     class: "bg-purple-400 text-black border-2 border-purple-400 ",
     icon: ReduxIcon,
+    link: "https://redux-toolkit.js.org/",
   },
   Zustand: {
     name: "Zustand",
-    class: "bg-orange-300 text-black border-2 border-purple-400 ",
-    icon: ReduxIcon,
+    class: "bg-red-600 text-white border-2 border-purple-400 ",
+    icon: ZustandIcon,
+    link: "https://zustand-demo.pmnd.rs/",
   },
 };
 
 const PROJECTS = [
   {
-    title: "Forgweb |",
-    subtitle: " Your Gateway to Dev Web Resources",
+    title: "Forgweb ",
+    subtitle: "| Your Gateway to Dev Web Resources",
     description:
       "User-friendly web application designed to serve as your centralized hub for accessing a curated collection of useful websites. With a sleek and intuitive interface, Forgweb empowers users to effortlessly discover and explore a diverse range of online resources across various categories. More resources and features to be added in the future",
     state: "In progress",
     link: "https://forgweb.netlify.app/",
     github: "https://github.com/BertoRamosM/Forgweb",
     image: "/projects/Forgweb.webp",
-    tags: [TAGS.REACT, TAGS.Redux, TAGS.STYLEDCOMPONENTS],
+    tags: [TECHS.REACT, TECHS.Redux, TECHS.STYLEDCOMPONENTS],
   },
   {
-    title: "Quizzo | ",
-    subtitle: "Test Your Front-End Skills",
+    title: "Quizzo ",
+    subtitle: "| Test Your Front-End Skills",
     description:
       "Quizzo is a quiz application focused on front-end development topics. It features a variety of questions aimed at refreshing and reinforcing knowledge in the field. The application utilizes Zustand as a global state manager, MaterialUI for creating visually appealing components.",
     state: "Finished",
     link: "https://quizzo-berto.netlify.app/",
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",
-    tags: [TAGS.REACT, TAGS.TypeScript, TAGS.Zustand],
+    tags: [TECHS.REACT, TECHS.TypeScript, TECHS.Zustand],
   },
   {
-    title: "Argent Bank | ",
+    title: "Argent Bank ",
     subtitle: "",
     description:
       "Argent Bank was the last project of my formation with Open Class Rooms. Was a comprehensive project to learn managing front-end development tasks, with a particular focus on React and Redux/Redux Toolkit and API calls to the backend. The project aimed to consolidate various aspects of front-end development.",
@@ -85,7 +94,7 @@ const PROJECTS = [
     github:
       "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
     image: "/projects/Argent.webp",
-    tags: [TAGS.REACT, TAGS.Redux],
+    tags: [TECHS.REACT, TECHS.Redux],
   },
 ];
 ---
@@ -98,16 +107,19 @@ const PROJECTS = [
           {title}
           <span class="text-purple-300 text-2xl">{subtitle}</span>
         </h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <p class="text-m mb-4 text-pretty">{description}</p>
         <ul class="flex flex-row gap-x-4 mb-8">
           {tags.map((tag) => (
             <li>
-              <span
-                class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-xs md:text-sm lg:text-xs py-1 px-0.5 font-bold`}
+              <a
+                href={tag.link}
+                target="_blank"
+                class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-xs sm:text-xxs md:text-sm py-1 px-1 font-bold truncate`}
               >
-                <tag.icon class="size-6" />
+                {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
+
                 {tag.name}
-              </span>
+              </a>
             </li>
           ))}
         </ul>

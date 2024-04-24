@@ -1,41 +1,77 @@
 ---
-import AstroIcon from '../icons/AstroIcon.astro'
-import CssIcon from '../icons/CssIcon.astro'
-import GithubIcon from '../icons/Github.astro'
-import GitIcon from '../icons/GitIcon.astro'
-import HtmlIcon from '../icons/HtmlIcon.astro'
-import JavaScriptIcon from '../icons/JavaScriptIcon.astro'
-import ReactIcon from '../icons/ReactIcon.astro'
-import SaasIcon from '../icons/SaasIcon.astro'
-import StyledComponentsIcon from '../icons/StyledComponentsIcon.astro'
-import TailwindIcon from '../icons/TailwindIcon.astro'
-import TypeScriptIcon from '../icons/TypeScript.astro'
-import MaterialUI from "../icons/MaterialUI.astro"
-import ReduxIcon from '../icons/ReduxIcon.astro'
+import AstroIcon from "../icons/AstroIcon.astro";
+import CssIcon from "../icons/CssIcon.astro";
+import GithubIcon from "../icons/Github.astro";
+import GitIcon from "../icons/GitIcon.astro";
+import HtmlIcon from "../icons/HtmlIcon.astro";
+import JavaScriptIcon from "../icons/JavaScriptIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import SaasIcon from "../icons/SaasIcon.astro";
+import StyledComponentsIcon from "../icons/StyledComponentsIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import TypeScriptIcon from "../icons/TypeScript.astro";
+import MaterialUI from "../icons/MaterialUI.astro";
+import ReduxIcon from "../icons/ReduxIcon.astro";
 
-const ICONS =[
-  HtmlIcon,
-  CssIcon,
-  JavaScriptIcon,
-  ReactIcon,
-  ReduxIcon,
-  AstroIcon,
-  TypeScriptIcon,
-  TailwindIcon,
-  SaasIcon,
-  MaterialUI,
-  StyledComponentsIcon,
-  GithubIcon,
-  GitIcon,
-]
+const ICONS = [
+  { icon: HtmlIcon, name: "HTML" },
+  { icon: CssIcon, name: "CSS" },
+  { icon: JavaScriptIcon, name: "JavaScript" },
+  { icon: ReactIcon, name: "React" },
+  { icon: ReduxIcon, name: "Redux" },
+  { icon: AstroIcon, name: "Astro" },
+  { icon: TypeScriptIcon, name: "TypeScript" },
+  { icon: TailwindIcon, name: "Tailwind CSS" },
+  { icon: SaasIcon, name: "Sass" },
+  { icon: MaterialUI, name: "Material-UI" },
+  { icon: StyledComponentsIcon, name: "Styled Components" },
+  { icon: GithubIcon, name: "GitHub" },
+  { icon: GitIcon, name: "Git" },
+];
 ---
 
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+  .icon-container {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .icon-container:hover .icon {
+    filter: grayscale(100%);
+  }
+
+  .icon-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .icon-container:hover .icon-text {
+    opacity: 1;
+  }
+</style>
+
 <div class="w-full flex justify-center mt-9">
-  <div class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12">
-    {ICONS.map((Icon) => (
-      <div class="m-2">
-        <Icon class="size-8" />
-      </div>
-    ))}
+  <div
+    class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12"
+  >
+    {
+      ICONS.map((item, index) => (
+        <div class="m-2 icon-container">
+          <item.icon class="size-12 icon" />
+          <span class="icon-text text-white extra-bold text-pretty">
+            {item.name}
+          </span>
+        </div>
+      ))
+    }
   </div>
 </div>

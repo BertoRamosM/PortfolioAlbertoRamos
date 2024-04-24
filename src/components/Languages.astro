@@ -1,24 +1,52 @@
 ---
-const spanish = 'https://hatscripts.github.io/circle-flags/flags/es-variant.svg'
-const catalan = 'https://hatscripts.github.io/circle-flags/flags/es-ct.svg'
-const english = 'https://hatscripts.github.io/circle-flags/flags/gb.svg'
-const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg"
+const spanish = 'https://hatscripts.github.io/circle-flags/flags/es-variant.svg';
+const catalan = 'https://hatscripts.github.io/circle-flags/flags/es-ct.svg';
+const english = 'https://hatscripts.github.io/circle-flags/flags/gb.svg';
+const french = 'https://hatscripts.github.io/circle-flags/flags/fr.svg';
 
 const LanguagesList = [
-  spanish, catalan, english, french
-]
+  { flag: spanish, name: 'Spanish' },
+  { flag: catalan, name: 'Catalan' },
+  { flag: english, name: 'English' },
+  { flag: french, name: 'French' },
+];
 ---
 
+<style>
+  .flag-container {
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .flag-container:hover img {
+    opacity: 0.8;
+  }
+
+  .language-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .flag-container:hover .language-text {
+    opacity: 1;
+  }
+</style>
 
 <div class="w-full flex justify-center mt-9">
-  <div
-    class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12"
-  >
- {LanguagesList.map((language) => (
-      <div class="m-2">
-        <img src={language} alt={`${language} flag`}class="size-8"/>
+  <div class="flex flex-wrap justify-center max-w-screen-lg gap-x-10 gap-y-2 pb-12">
+    {LanguagesList.map((language, index) => (
+      <div class="m-2 flag-container">
+        <img src={language.flag} alt={`${language.name} flag`} class="size-12" />
+        <div class="language-text text-white">{language.name}</div>
       </div>
     ))}
-
   </div>
 </div>
