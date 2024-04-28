@@ -7,6 +7,7 @@ const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg";
 
 const LanguagesList = [spanish, catalan, english, french];
 import { Astronav, Dropdown, DropdownItems } from "astro-navbar";
+import ArrowDown from "../icons/ArrowDown.astro";
 ---
 
 <style>
@@ -46,10 +47,9 @@ import { Astronav, Dropdown, DropdownItems } from "astro-navbar";
 
     <Astronav>
       <Dropdown>
-        <button>
-          <p class="hover:underline hover:text-purple-300 nav-link py-2">
-            Languages
-          </p>
+        <button class="flex items-center hover:text-purple-300">
+          <p class="hover:underline nav-link py-2">Languages</p>
+          <ArrowDown />
         </button>
         <DropdownItems>
           <div class="">
