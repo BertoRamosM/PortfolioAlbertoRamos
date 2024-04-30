@@ -50,6 +50,10 @@ export const ui = {
     "footer.2": `Design inspired by`,
     "footer.3": `Icons by`,
     "footer.4": `Back to top`,
+    "lang.1": `English`,
+    "lang.2": `Spanish`,
+    "lang.3": `Catalan`,
+    "lang.4": `French`,
   },
   es: {
     "header.education": "Educación",
@@ -89,6 +93,10 @@ export const ui = {
     "footer.2": `Diseño inspirado por`,
     "footer.3": `Íconos por`,
     "footer.4": `Volver arriba`,
+    "lang.1": `Inglés`,
+    "lang.2": `Español`,
+    "lang.3": `Catalán`,
+    "lang.4": `Francés`,
   },
   cat: {
     "header.education": "Educació",
@@ -128,6 +136,10 @@ export const ui = {
     "footer.2": `Disseny inspirat per`,
     "footer.3": `Ícones per`,
     "footer.4": `Tornar amunt`,
+    "lang.1": `Anglès`,
+    "lang.2": `Espanyol`,
+    "lang.3": `Català`,
+    "lang.4": `Francès`,
   },
   fr: {
     "header.education": "Éducation",
@@ -167,5 +179,9 @@ export const ui = {
     "footer.2": `Conception inspirée par`,
     "footer.3": `Icônes par`,
     "footer.4": `Retour en haut`,
+    "lang.1": `Anglais`,
+    "lang.2": `Espagnol`,
+    "lang.3": `Catalan`,
+    "lang.4": `Français`,
   },
 } as const;
