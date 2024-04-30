@@ -70,9 +70,11 @@ const PROJECTS = [
   {
     title: "Forgweb ",
     subtitle: `| ${t("proj.1")}}`,
-    description:
-      t("proj.2"),
-    state: t("proj.3"),
+    description: t("proj.2"),
+    state: {
+      status: false,
+      name: t("proj.3.1"),
+    },
     link: "https://forgweb.netlify.app/",
     github: "https://github.com/BertoRamosM/Forgweb",
     image: "/projects/Forgweb.webp",
@@ -81,9 +83,10 @@ const PROJECTS = [
   {
     title: "Quizzo ",
     subtitle: `| ${t("proj.4")}`,
-    description:
-      t("proj.5"),
-    state: t("proj.6"),
+    description: t("proj.5"),
+    state: {
+      status: true,
+      name: t("proj.3.2")},
     link: "https://quizzo-berto.netlify.app/",
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",
@@ -92,9 +95,11 @@ const PROJECTS = [
   {
     title: "Argent Bank ",
     subtitle: "",
-    description:
-      t("proj.7"),
-    state: "Finished",
+    description: t("proj.7"),
+    state: {
+      status: true,
+      name: t("proj.3.2"),
+    },
     link: undefined,
     github:
       "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
@@ -108,11 +113,11 @@ const PROJECTS = [
   PROJECTS.map(
     ({ title, subtitle, state, description, tags, image, github, link }) => (
       <article class="pb-8 pt-14 ">
-         <a href={link} target="_blank">
-        <h3 class="text-3xl font-semibold text-yellow-100 mb-2">
-          {title}
-          <span class="text-purple-300 text-2xl">{subtitle}</span>
-        </h3>
+        <a href={link} target="_blank">
+          <h3 class="text-3xl font-semibold text-yellow-100 mb-2">
+            {title}
+            <span class="text-purple-300 text-2xl">{subtitle}</span>
+          </h3>
         </a>
         <p class="text-m mb-4 text-pretty">{description}</p>
         <ul class="flex flex-row gap-x-4 mb-8">
@@ -139,13 +144,13 @@ const PROJECTS = [
               class="rounded shadow-2xl shadow-white/20 hover:scale-105 transition-transform duration-500 ease-in-out"
             />
           </a>
-          {state === "In progress" ? (
+          {state.status === false ? (
             <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-orange-400">
-              {state}
+              {state.name}
             </span>
           ) : (
             <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-blue-500">
-              {state}
+              {state.name}
             </span>
           )}
         </div>
