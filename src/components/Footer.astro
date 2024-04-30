@@ -1,6 +1,11 @@
-<footer
-  class="rounded-lg shadow w-full mx-auto xl:w-[1120px] z-50"
->
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="rounded-lg shadow w-full mx-auto xl:w-[1120px] z-50">
   <div
     class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
   >
@@ -9,20 +14,20 @@
         href="https://github.com/BertoRamosM/"
         target="_blank"
         class="hover:underline hover:text-purple-300"
-        >Alberto Ramos. No Rights Reserved.
+        >Alberto Ramos. {t("footer.1")}
       </a></span
     >
     <a
       href="https://www.figma.com/community/file/1316036866823217119"
       target="_blank"
       class="hover:underline text-sm sm:text-center text-white-100/90 hover:text-purple-300"
-      >Design inspired by Elfira Nurul Ilma.
+      >{t("footer.2")} Elfira Nurul Ilma.
     </a>
     <a
       href="https://tabler.io/icons"
       target="_blank"
       class="hover:underline text-sm sm:text-center text-white-100/90 hover:text-purple-300"
-      >Icons by Tabler</a
+      >{t("footer.3")} Tabler</a
     >
 
     <ul
@@ -30,7 +35,7 @@
     >
       <li>
         <a href="#" class="hover:underline hover:text-purple-300 me-4 md:me-6"
-          >Back to top</a
+          >{t("footer.4")}</a
         >
       </li>
     </ul>
