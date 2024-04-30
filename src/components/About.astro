@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <style>
   .profile-pic {
     mask-image: linear-gradient(black 80%, transparent);
@@ -8,31 +15,20 @@
   class="flex flex-col md:flex-row gap-x-8 gap-y-10 md:gap-y-0 justify-center items-center"
 >
   <div class="[&>p]:mb-4 text-pretty order-2 md:order-1">
-    <p class="text-purple-200 text-2xl">I'm Alberto, a Nomad Web Developer!</p>
-    For years, I wandered the globe, exploring far-off lands and diving into diverse
-    professions. Little did I know that my true calling awaited me in the unlikeliest
-    of places – <span class="text-yellow-100">the world of programming.</span>
+    <p class="text-purple-200 text-2xl">{t("about.1")}</p>
+    {t("about.2")}<span class="text-yellow-100">{t("about.3")}</span>
     <p>
-      About a year ago, I stumbled upon the amazing world of web development.
-      What started as a chance encounter swiftly blossomed into a burning
-      passion and a newfound career path, blended with an exciting van life.
+      {t("about.4")}
     </p>
     <p>
-      Now, I'm on the search for my <span class="text-yellow-100"
-        >first job as a web developer</span
-      >, eager to establish myself and continue growing and learning in this
-      incredible industry. <span class="text-purple-300"
-        >While I acknowledge that this is merely the beginning of my
-        journey,
-      </span>with unwavering dedication and perseverance, I will succeed.
+      {t("about.5")}<span class="text-yellow-100">{t("about.6")}</span>{
+        t("about.7")
+      }<span class="text-purple-300">{t("about.8")} </span>with {t("about.9")}
     </p>
     <p>
-      Currently passionate about learning <span
-        class="text-green-300"
-        >backend development with Node.js and Express.</span
-      >
+      {t("about.10")}<span class="text-green-300">{t("about.11")}</span>
     </p>
-    <p class="text-purple-300">Join me on this adventure!</p>
+    <p class="text-purple-300">{t("about.12")}</p>
   </div>
   <img
     loading="lazy"
