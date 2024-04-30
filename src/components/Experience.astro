@@ -1,19 +1,24 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import ExperienceItem from '../components/ExperienceItem.astro'
 const EXPERIENCE=[
   {
-    date: 'September 2023 - June 2024',
-    title: 'Web Developer',
-    location: 'OpenClassrooms | France - Online',
+    date: t("exp.date1"),
+    title:  t("exp.1"),
+    location: `OpenClassrooms | ${t("exp.2")}`,
     link: 'https://openclassrooms.com/en/paths/900-integrateur-web',
-    description: 'Intensive web developer program encompassed 603 hours of supervised learning, focusing on the development of practical skills essential for the industry.'
+    description: t("exp.3")
   },
   {
-    date: 'April 2023 - Present',
-    title: 'Self-taught Web Developer',
+    date: t("exp.date2"),
+    title: t("exp.4"),
     location: ' The Odin Project | Online',
     link: "https://www.theodinproject.com/",
-    description: 'Open-source curriculum for learning web development. It offers a hands-on approach with practical projects. Very popular among self-taught developers'
+    description: t("exp.5")
   },
 ]
 ---
