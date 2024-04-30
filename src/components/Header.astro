@@ -1,11 +1,28 @@
 ---
-const spanish =
-  "https://hatscripts.github.io/circle-flags/flags/es-variant.svg";
-const catalan = "https://hatscripts.github.io/circle-flags/flags/es-ct.svg";
-const english = "https://hatscripts.github.io/circle-flags/flags/gb.svg";
-const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const LanguagesList = [spanish, catalan, english, french];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const english = {
+  name: "",
+  link: "https://hatscripts.github.io/circle-flags/flags/gb.svg",
+};
+const spanish = {
+  name: "es",
+  link: "https://hatscripts.github.io/circle-flags/flags/es-variant.svg",
+};
+const catalan = {
+  name: "cat",
+  link: "https://hatscripts.github.io/circle-flags/flags/es-ct.svg",
+};
+
+const french = {
+  name: "fr",
+  link: "https://hatscripts.github.io/circle-flags/flags/fr.svg",
+};
+
+const LanguagesList = [english, spanish, catalan, french];
 import { Astronav, Dropdown, DropdownItems } from "astro-navbar";
 import ArrowDown from "../icons/ArrowDown.astro";
 ---
@@ -33,22 +50,22 @@ import ArrowDown from "../icons/ArrowDown.astro";
     class="flex flex-row justify-center items-center gap-x-10 opacity-90 relative"
   >
     <a href="#education" class="hover:underline hover:text-purple-400 nav-link"
-      >Education</a
+      >{t("header.education")}</a
     >
     <a href="#projects" class="hover:underline hover:text-purple-400 nav-link"
-      >Projects</a
+      >{t("header.project")}</a
     >
     <a href="#about" class="hover:underline hover:text-purple-400 nav-link"
-      >About</a
+      >{t("header.about")}</a
     >
     <a href="#contact" class="hover:underline hover:text-purple-400 nav-link"
-      >Contact</a
+      >{t("header.contact")}</a
     >
 
     <Astronav>
       <Dropdown>
         <button class="flex items-center hover:text-purple-300 hover:underline">
-          <p class="nav-link py-2">Languages</p>
+          <p class="nav-link py-2">{t("header.language")}</p>
           <ArrowDown />
         </button>
         <DropdownItems>
@@ -57,9 +74,9 @@ import ArrowDown from "../icons/ArrowDown.astro";
               <div class="flex justify-center absolute right-2">
                 {
                   LanguagesList.map((language) => (
-                    <a class="mx-4 my-1" href="google">
+                    <a class="mx-4 my-1" href={`/${language.name}`}>
                       <img
-                        src={language}
+                        src={language.link}
                         alt={`${language} flag`}
                         class="size-6"
                       />
