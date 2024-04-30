@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -86,7 +86,8 @@ const PROJECTS = [
     description: t("proj.5"),
     state: {
       status: true,
-      name: t("proj.3.2")},
+      name: t("proj.3.2"),
+    },
     link: "https://quizzo-berto.netlify.app/",
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",

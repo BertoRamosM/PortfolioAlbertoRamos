@@ -1,36 +1,34 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-import ExperienceItem from '../components/ExperienceItem.astro'
-const EXPERIENCE=[
+import ExperienceItem from "../components/ExperienceItem.astro";
+const EXPERIENCE = [
   {
     date: t("exp.date1"),
-    title:  t("exp.1"),
+    title: t("exp.1"),
     location: `OpenClassrooms | ${t("exp.2")}`,
-    link: 'https://openclassrooms.com/en/paths/900-integrateur-web',
-    description: t("exp.3")
+    link: "https://openclassrooms.com/en/paths/900-integrateur-web",
+    description: t("exp.3"),
   },
   {
     date: t("exp.date2"),
     title: t("exp.4"),
-    location: ' The Odin Project | Online',
+    location: " The Odin Project | Online",
     link: "https://www.theodinproject.com/",
-    description: t("exp.5")
+    description: t("exp.5"),
   },
-]
+];
 ---
-
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
-    EXPERIENCE.map(experience =>(
+    EXPERIENCE.map((experience) => (
       <li class="mb-20 ms-4">
-        <ExperienceItem {... experience}/>
-        </li>
+        <ExperienceItem {...experience} />
+      </li>
     ))
   }
 </ol>
-
