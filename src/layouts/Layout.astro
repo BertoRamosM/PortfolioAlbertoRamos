@@ -3,6 +3,8 @@ interface Props {
   title: string;
 }
 
+import { ViewTransitions } from "astro:transitions";
+
 import "@fontsource-variable/onest";
 
 const { title, description } = Astro.props;
@@ -25,6 +27,8 @@ const { currentLocale } = Astro;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+
     <title>{title}</title>
   </head>
 
