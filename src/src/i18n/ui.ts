@@ -63,6 +63,8 @@ export const ui = {
     "proj.6": `Finished`,
     "proj.7": `Argent Bank was the last project of my training with OpenclassRooms. It was a comprehensive project to learn managing front-end development tasks, with a particular focus on React and Redux/Redux Toolkit, and API calls to the backend. The project aimed to consolidate various aspects of front-end development.`,
     "proj.8": `Preview`,
+    "proj.9": ` My first web development job.`,
+    "proj.10": `Albert s'occupe de tout it's my first professional project as a freelancer. I have created this showcase website for a small French business that offers services to property owners with listings on Airbnb in Paris and along the French coast. The project utilizes modern technologies such as Astro and Tailwind to achieve high performance and SEO. Still in progress.`,
   },
   es: {
     "header.education": "Educación",
@@ -115,6 +117,8 @@ export const ui = {
     "proj.6": `Terminado`,
     "proj.7": `Argent Bank fue el último proyecto de mi formación con OpenclassRooms. Fue un proyecto completo para aprender a gestionar tareas de desarrollo front-end, con un enfoque particular en React y Redux/Redux Toolkit, y llamadas a la API del backend. El proyecto tuvo como objetivo consolidar varios aspectos del desarrollo front-end.`,
     "proj.8": `Vista previa`,
+    "proj.9": `Mi primer trabajo como desarrollador web.`,
+    "proj.10": `Albert s'occupe de tout, es mi primer proyecto profesional como freelance. He creado este sitio web de exhibición para un pequeño negocio francés que ofrece servicios a propietarios con anuncios en Airbnb en París y a lo largo de la costa francesa. El proyecto utiliza tecnologías modernas como Astro y Tailwind para lograr un alto rendimiento y SEO. Todavía en progreso.`,
   },
   cat: {
     "header.education": "Educació",
@@ -167,6 +171,8 @@ export const ui = {
     "proj.6": `Acabat`,
     "proj.7": `Argent Bank va ser l'últim projecte de la meva formació amb OpenclassRooms. Va ser un projecte complet per aprendre a gestionar tasques de desenvolupament front-end, amb un focus particular en React i Redux/Redux Toolkit, i crides a l'API del backend. El projecte va tenir com a objectiu consolidar diversos aspectes del desenvolupament front-end.`,
     "proj.8": `Previsualització`,
+    "proj.9": `El meu primer treball com a desenvolupador web`,
+    "proj.10": `Albert s'encarrega de tot, és el meu primer projecte professional com a freelancer. He creat aquest lloc web de mostra per a un petit negoci francès que ofereix serveis a propietaris amb anuncis a Airbnb a París i al llarg de la costa francesa. El projecte utilitza tecnologies modernes com Astro i Tailwind per aconseguir un alt rendiment i SEO. Encara en curs.`,
   },
   fr: {
     "header.education": "Éducation",
@@ -219,5 +225,7 @@ export const ui = {
     "proj.6": `Terminé`,
     "proj.7": `Argent Bank a été le dernier projet de ma formation avec OpenclassRooms. C'était un projet complet pour apprendre à gérer les tâches de développement front-end, avec un accent particulier sur React et Redux/Redux Toolkit, et les appels à l'API du backend. Le projet visait à consolider divers aspects du développement front-end.`,
     "proj.8": `Aperçu`,
+    "proj.9": `Mon premier emploi en tant que développeur web`,
+    "proj.10": `Albert s'occupe de tout, c'est mon premier projet professionnel en tant que freelance. J'ai créé ce site web de démonstration pour une petite entreprise française qui propose des services aux propriétaires avec des annonces sur Airbnb à Paris et le long de la côte française. Le projet utilise des technologies modernes telles que Astro et Tailwind pour obtenir de hautes performances et un bon référencement SEO. Toujours en cours.`,
   },
 } as const;
