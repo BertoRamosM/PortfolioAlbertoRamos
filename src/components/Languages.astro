@@ -22,9 +22,12 @@ const LanguagesList = [
   .flag-container {
     position: relative;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: transform 0.2s ease-in-out;
   }
 
+  .flag-container:hover {
+    transform: scale(1.25);
+  }
   .flag-container:hover img {
     opacity: 0.8;
   }

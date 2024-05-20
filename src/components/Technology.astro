@@ -36,11 +36,17 @@ const ICONS = [
   .icon-container {
     position: relative;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      transform 0.2s ease-in-out;
   }
 
   .icon-container:hover .icon {
     filter: grayscale(100%);
+  }
+
+  .icon-container:hover {
+    transform: scale(1.25);
   }
 
   .icon-text {
@@ -65,7 +71,7 @@ const ICONS = [
     }
 
     .icon-text {
-      font-size: 1.2rem; 
+      font-size: 1.2rem;
     }
   }
 </style>
