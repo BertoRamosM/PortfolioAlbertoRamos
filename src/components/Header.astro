@@ -46,11 +46,30 @@ import ArrowDown from "../icons/ArrowDown.astro";
       gap: 0.7rem;
     }
   }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    z-index: 50;
+    background-color: rgba(
+      55,
+      65,
+      81,
+      0.55
+    ); /* bg-gray-900 with bg-opacity-55 */
+    border-radius: 1rem; /* rounded-2xl */
+    padding: 1.5rem; /* py-6 sm:py-5 sm:px-10 px-2 */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+
+  .header-hidden {
+    transform: translateY(-100%); /* Hide the header */
+  }
 </style>
 
-<header
-  class="flex justify-center py-6 sm:py-5 sm:px-10 mx-auto fixed top-0 left-5 right-5 z-50 bg-gray-900 rounded-2xl bg-opacity-55 px-2 max-w-max"
->
+<header id="header" class="flex justify-center mx-auto max-w-max">
   <nav
     class="flex flex-row justify-center items-center gap-x-10 opacity-90 relative"
   >
@@ -97,3 +116,19 @@ import ArrowDown from "../icons/ArrowDown.astro";
     </Astronav>
   </nav>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("header");
+    let lastScrollY = window.scrollY;
+
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY) {
+        header?.classList.add("header-hidden");
+      } else {
+        header?.classList.remove("header-hidden");
+      }
+      lastScrollY = window.scrollY;
+    });
+  });
+</script>
