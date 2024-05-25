@@ -73,7 +73,7 @@ import ArrowDown from "../icons/ArrowDown.astro";
   }
 
   .header-hidden {
-    transform: translateY(-105%);
+    transform: translateY(-115%);
   }
 </style>
 
@@ -107,7 +107,7 @@ import ArrowDown from "../icons/ArrowDown.astro";
                 {
                   LanguagesList.map((language) => (
                     <a class="mx-4 my-1" href={`/${language.name}`}>
-                      <language.component />
+                      <language.component class="size-8"/>
                       {/* <{language.link} />
                       <img
                         src={language.link}
