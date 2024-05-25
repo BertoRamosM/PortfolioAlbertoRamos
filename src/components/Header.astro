@@ -4,22 +4,30 @@ import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+
+import Spain from "../flags-icons/Spain.astro"
+import Cat from "../flags-icons/Catalonia.astro"
+import Uk from "../flags-icons/Uk.astro"
+import France from "../flags-icons/France.astro"
+
+
+
 const english = {
   name: "",
-  link: "https://hatscripts.github.io/circle-flags/flags/gb.svg",
+  component: Uk
 };
 const spanish = {
   name: "es",
-  link: "https://hatscripts.github.io/circle-flags/flags/es-variant.svg",
+  component: Spain
 };
 const catalan = {
   name: "ca",
-  link: "https://hatscripts.github.io/circle-flags/flags/es-ct.svg",
+  component: Cat
 };
 
 const french = {
   name: "fr",
-  link: "https://hatscripts.github.io/circle-flags/flags/fr.svg",
+   component: France
 };
 
 const LanguagesList = [english, spanish, catalan, french];
@@ -99,11 +107,13 @@ import ArrowDown from "../icons/ArrowDown.astro";
                 {
                   LanguagesList.map((language) => (
                     <a class="mx-4 my-1" href={`/${language.name}`}>
+                      <language.component />
+                      {/* <{language.link} />
                       <img
                         src={language.link}
                         alt={`${language} flag`}
                         class="size-6"
-                      />
+                      />  */}
                     </a>
                   ))
                 }
