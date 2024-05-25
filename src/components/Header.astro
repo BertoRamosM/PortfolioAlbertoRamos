@@ -65,7 +65,7 @@ import ArrowDown from "../icons/ArrowDown.astro";
   }
 
   .header-hidden {
-    transform: translateY(-100%);
+    transform: translateY(-105%);
   }
 </style>
 
@@ -118,7 +118,7 @@ import ArrowDown from "../icons/ArrowDown.astro";
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     let lastScrollY = window.scrollY;
 
