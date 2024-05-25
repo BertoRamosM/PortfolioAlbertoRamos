@@ -4,17 +4,16 @@ import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const spanish =
-  "https://hatscripts.github.io/circle-flags/flags/es-variant.svg";
-const catalan = "https://hatscripts.github.io/circle-flags/flags/es-ct.svg";
-const english = "https://hatscripts.github.io/circle-flags/flags/gb.svg";
-const french = "https://hatscripts.github.io/circle-flags/flags/fr.svg";
+import Spain from "../flags-icons/Spain.astro"
+import Cat from "../flags-icons/Catalonia.astro"
+import Uk from "../flags-icons/Uk.astro"
+import France from "../flags-icons/France.astro"
 
 const LanguagesList = [
-  { flag: spanish, name: t("lang.2") },
-  { flag: catalan, name: t("lang.3") },
-  { flag: english, name: t("lang.1") },
-  { flag: french, name: t("lang.4") },
+  { flag: Spain, name: t("lang.2") },
+  { flag: Cat, name: t("lang.3") },
+  { flag: Uk, name: t("lang.1") },
+  { flag: France, name: t("lang.4") },
 ];
 ---
 
@@ -66,11 +65,12 @@ const LanguagesList = [
     {
       LanguagesList.map((language) => (
         <div class="m-2 flag-container">
-          <img
+          <language.flag class="size-12 icon rounded-full"/>
+         {/*  <img
             src={language.flag}
             alt={`${language.name} flag`}
             class="size-12 icon"
-          />
+          /> */}
           <div class="language-text text-white icon-text">{language.name}</div>
         </div>
       ))
