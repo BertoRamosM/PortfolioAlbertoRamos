@@ -1,7 +1,7 @@
 export const languages = {
   en: "English",
   es: "Espanol",
-  cat: "Catala",
+  ca: "Catala",
   fr: "Français",
 };
 
@@ -120,7 +120,7 @@ export const ui = {
     "proj.9": `Mi primer trabajo como desarrollador web.`,
     "proj.10": `Albert s'occupe de tout, es mi primer proyecto profesional como freelance. He creado este sitio web de exhibición para un pequeño negocio francés que ofrece servicios a propietarios con anuncios en Airbnb en París y a lo largo de la costa francesa. El proyecto utiliza tecnologías modernas como Astro y Tailwind para lograr un alto rendimiento y SEO. Todavía en progreso.`,
   },
-  cat: {
+  ca: {
     "header.education": "Educació",
     "header.project": "Projectes",
     "header.about": "Sobre mi",
