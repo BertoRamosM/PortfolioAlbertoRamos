@@ -4,30 +4,27 @@ import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-
-import Spain from "../flags-icons/Spain.astro"
-import Cat from "../flags-icons/Catalonia.astro"
-import Uk from "../flags-icons/Uk.astro"
-import France from "../flags-icons/France.astro"
-
-
+import Spain from "../flags-icons/Spain.astro";
+import Cat from "../flags-icons/Catalonia.astro";
+import Uk from "../flags-icons/Uk.astro";
+import France from "../flags-icons/France.astro";
 
 const english = {
   name: "",
-  component: Uk
+  component: Uk,
 };
 const spanish = {
   name: "es",
-  component: Spain
+  component: Spain,
 };
 const catalan = {
   name: "ca",
-  component: Cat
+  component: Cat,
 };
 
 const french = {
   name: "fr",
-   component: France
+  component: France,
 };
 
 const LanguagesList = [english, spanish, catalan, french];
@@ -61,15 +58,10 @@ import ArrowDown from "../icons/ArrowDown.astro";
     left: 5%;
     right: 5%;
     z-index: 50;
-    background-color: rgba(
-      55,
-      65,
-      81,
-      0.55
-    ); 
-    border-radius: 1rem; 
+    background-color: rgba(55, 65, 81, 0.55);
+    border-radius: 1rem;
     padding: 1.5rem;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
   }
 
   .header-hidden {
@@ -96,9 +88,9 @@ import ArrowDown from "../icons/ArrowDown.astro";
 
     <Astronav>
       <Dropdown>
-        <button class="flex items-center hover:text-purple-300 hover:underline">
+        <button class="flex items-center hover:text-purple-300 hover:underline group">
           <p class="nav-link py-2">{t("header.language")}</p>
-          <ArrowDown />
+          <ArrowDown class="group-hover:animate-bounce" />
         </button>
         <DropdownItems>
           <div class="">
@@ -107,7 +99,7 @@ import ArrowDown from "../icons/ArrowDown.astro";
                 {
                   LanguagesList.map((language) => (
                     <a class="mx-4 my-1" href={`/${language.name}`}>
-                      <language.component class="size-8"/>
+                      <language.component class="size-8" />
                       {/* <{language.link} />
                       <img
                         src={language.link}

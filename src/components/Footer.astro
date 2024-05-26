@@ -16,20 +16,20 @@ import ArrowUp from "../icons/ArrowUp.astro"
         href="https://github.com/BertoRamosM/"
         target="_blank"
         class="hover:underline hover:text-purple-300"
-        >Alberto Ramos. {t("footer.1")}
+        >Alberto Ramos <span class="sm:hidden"> | </span>{t("footer.1")}
       </a></span
     >
     <a
       href="https://www.figma.com/community/file/1316036866823217119"
       target="_blank"
       class="hover:underline sm:text-center text-white-100/90 hover:text-purple-300"
-      >{t("footer.2")} Elfira Nurul Ilma.
+      ><span class="sm:hidden"> | </span>{t("footer.2")} Elfira Nurul Ilma
     </a>
     <a
       href="https://tabler.io/icons"
       target="_blank"
       class="hover:underline sm:text-center text-white-100/90 hover:text-purple-300"
-      >{t("footer.3")} Tabler</a
+      ><span class="sm:hidden"> | </span>{t("footer.3")} Tabler</a
     >
 
     <ul
@@ -37,7 +37,7 @@ import ArrowUp from "../icons/ArrowUp.astro"
     >
       <li>
         <a href="#" class="hover:underline hover:text-purple-300 me-4 md:me-6 flex items-center gap-2 justify-center"
-          >{t("footer.4")} <ArrowUp /></a
+          >{t("footer.4")} <ArrowUp class="animate-bounce"/></a
         >
       </li>
     </ul>
