@@ -114,7 +114,7 @@ const PROJECTS = [
       status: true,
       name: t("proj.3.2"),
     },
-    link:  "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
+    link: "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
     github:
       "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
     image: "/projects/Argent.webp",
@@ -128,7 +128,7 @@ const PROJECTS = [
     ({ title, subtitle, state, description, tags, image, github, link }) => (
       <article class="pb-8 pt-14 ">
         <a href={link} target="_blank">
-          <h3 class="text-3xl font-semibold text-yellow-100 mb-2">
+          <h3 class="text-3xl font-semibold text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
             {title}
             <span class="text-purple-300 text-2xl">{subtitle}</span>
           </h3>
@@ -140,7 +140,7 @@ const PROJECTS = [
               <a
                 href={tag.link}
                 target="_blank"
-                class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-xs sm:text-xxs md:text-sm py-1 px-1 font-semibold truncate hover:scale-105 hover:opacity-80 transition-transform duration-200 ease-in-out`}
+                class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-xs sm:text-xxs md:text-sm py-1 px-1 font-semibold truncate hover:scale-110 transition-transform duration-200 ease-in-out`}
               >
                 {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 
