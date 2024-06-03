@@ -28,7 +28,6 @@ const { currentLocale } = Astro;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
-    
 
     <title>{title}</title>
   </head>
@@ -47,7 +46,7 @@ const { currentLocale } = Astro;
 
 <style is:global>
   :root {
-    color-scheme: light dark;
+  
   }
 
   html {
@@ -59,6 +58,7 @@ const { currentLocale } = Astro;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: white;
   }
 
   @media (prefers-reduced-motion: reduce) {
