@@ -52,9 +52,9 @@ const t = useTranslations(lang);
           soon as possible.
         </h3>
         <div>
-          <a
-            href=`/${lang}`
-            class="text-yellow-200 hover:underline flex items-center gap-8"
+          <button
+            onclick="history.back()"
+            class="text-yellow-200 hover:underline flex justify-center items-center gap-8"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const t = useTranslations(lang);
               ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                 d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path
                 d="M5 12l6 -6"></path></svg
-            >Back to the main page</a
+            >Back to the previous page</button
           >
         </div>
       </div>
