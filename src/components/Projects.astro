@@ -125,74 +125,87 @@ const PROJECTS = [
 
 {
   PROJECTS.map(
-    ({ title, subtitle, state, description, tags, image, github, link }) => (
-      <article class="pb-14 pt-14 ">
-        <a href={link} target="_blank">
-          <h3 class="text-3xl font-semibold text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
-            {title}
-            <span class="text-purple-300 text-2xl">{subtitle}</span>
-          </h3>
-        </a>
-        <p class="text-m mb-4 text-pretty">{description}</p>
-        <ul class="flex flex-row gap-x-4 mb-8">
-          {tags.map((tag) => (
-            <li>
-              <a
-                href={tag.link}
-                target="_blank"
-                class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass `}
-              >
-                {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
-
-                {tag.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div class="relative overflow-hidden">
+    ({
+      title,
+      subtitle,
+      state,
+      description,
+      tags,
+      image,
+      github,
+      link,
+    }, index) => (
+      <>
+        <article class="pb-14 pt-14 ">
           <a href={link} target="_blank">
-            <img
-              loading="lazy"
-              src={image}
-              alt={`Screenshot from project ${title}`}
-              class="rounded shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 ease-in-out glass"
-            />
+            <h3 class="text-3xl font-semibold text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
+              {title}
+              <span class="text-purple-300 text-2xl">{subtitle}</span>
+            </h3>
           </a>
-          {state.status === false ? (
-            <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-orange-400 backdrop-blur-3xl">
-              {state.name}
-            </span>
-          ) : (
-            <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-blue-500">
-              {state.name}
-            </span>
-          )}
-        </div>
-        <nav class="flex gap-4 pt-2 align-center  mt-8 flex-wrap ">
-          {link != undefined ? (
-            <a
-              href={link}
-              target="_blank"
-              class="rounded-full border border-white/10 gap-x-3
-  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex item-center justify-center hover:text-purple-300 glass"
-            >
-              <Live class="size-6" />
-              {t("proj.8")}
-            </a>
-          ) : null}
+          <p class="text-m mb-4 text-pretty">{description}</p>
+          <ul class="flex flex-row gap-x-4 mb-8">
+            {tags.map((tag) => (
+              <li>
+                <a
+                  href={tag.link}
+                  target="_blank"
+                  class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass `}
+                >
+                  {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 
-          {github != undefined ? (
-            <a
-              href={github}
-              target="_blank"
-              class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center glass"
-            >
-              <Github class="size-5" />
-              Github
+                  {tag.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div class="relative overflow-hidden">
+            <a href={link} target="_blank">
+              <img
+                loading="lazy"
+                src={image}
+                alt={`Screenshot from project ${title}`}
+                class="rounded shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 ease-in-out glass"
+              />
             </a>
-          ) : null}
-        </nav>
-      </article>
+            {state.status === false ? (
+              <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-orange-400 backdrop-blur-3xl">
+                {state.name}
+              </span>
+            ) : (
+              <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-blue-500">
+                {state.name}
+              </span>
+            )}
+          </div>
+          <nav class="flex gap-4 pt-2 align-center  mt-8 flex-wrap ">
+            {link != undefined ? (
+              <a
+                href={link}
+                target="_blank"
+                class="rounded-full border border-white/10 gap-x-3
+  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex item-center justify-center hover:text-purple-300 glass"
+              >
+                <Live class="size-6" />
+                {t("proj.8")}
+              </a>
+            ) : null}
+
+            {github != undefined ? (
+              <a
+                href={github}
+                target="_blank"
+                class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center glass"
+              >
+                <Github class="size-5" />
+                Github
+              </a>
+            ) : null}
+          </nav>
+        </article>
+
+        <hr class="my-2 h-0.5 border-t-0 bg-[#dddddd35] dark:bg-white/10" />
+      </>
     )
   )
 }
