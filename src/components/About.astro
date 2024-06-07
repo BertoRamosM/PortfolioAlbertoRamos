@@ -9,6 +9,12 @@ const t = useTranslations(lang);
   .profile-pic {
     mask-image: linear-gradient(black 80%, transparent);
   }
+
+  .glass {
+    backdrop-filter: blur(19px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
 </style>
 
 <section
@@ -23,7 +29,8 @@ const t = useTranslations(lang);
     <p>
       {t("about.5")}<span class="text-yellow-100">{t("about.6")}</span>{
         t("about.7")
-      }<span class="text-purple-300">{t("about.8")} </span> {t("about.9")}
+      }<span class="text-purple-300">{t("about.8")} </span>
+      {t("about.9")}
     </p>
     <p>
       {t("about.10")}<span class="text-green-300">{t("about.11")}</span>
@@ -34,7 +41,6 @@ const t = useTranslations(lang);
     loading="lazy"
     src="../../images/cvpic4.webp"
     alt="picture about myself"
-    class="rounded-md object-cover size-96 md:w-[64] md:h-[64] order-1 md:order-2 profile-pic"
+    class="rounded-md object-cover size-96 md:w-[64] md:h-[64] order-1 md:order-2 profile-pic glass"
   />
-  
 </section>

@@ -56,6 +56,12 @@ const LanguagesList = [
       font-size: 1.2rem;
     }
   }
+
+  .glass {
+    backdrop-filter: blur(19px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
 </style>
 
 <div class="w-full flex justify-center mt-9">
@@ -64,8 +70,8 @@ const LanguagesList = [
   >
     {
       LanguagesList.map((language) => (
-        <div class="m-2 flag-container">
-          <language.flag class="size-12 icon rounded-full" />
+        <div class="p-4 flag-container glass">
+          <language.flag class="size-10 icon rounded-full" />
           {/*  <img
             src={language.flag}
             alt={`${language.name} flag`}

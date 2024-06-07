@@ -26,7 +26,7 @@ const t = useTranslations(lang);
       <div>
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
         >
           {t("contact.1")}
         </label>
@@ -34,7 +34,7 @@ const t = useTranslations(lang);
           name="email"
           type="email"
           id="email"
-          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500"
+          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500 glass active:border-none"
           placeholder={t("contact.email")}
           required
         />
@@ -42,7 +42,7 @@ const t = useTranslations(lang);
       <div>
         <label
           for="subject"
-          class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
         >
           {t("contact.2")}
         </label>
@@ -50,7 +50,7 @@ const t = useTranslations(lang);
           name="subject"
           type="text"
           id="subject"
-          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500"
+          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500 glass"
           placeholder={t("contact.3")}
           required
         />
@@ -58,7 +58,7 @@ const t = useTranslations(lang);
       <div class="sm:col-span-2">
         <label
           for="message"
-          class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
         >
           {t("contact.4")}
         </label>
@@ -66,7 +66,7 @@ const t = useTranslations(lang);
           name="message"
           id="message"
           rows="6"
-          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500"
+          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500 glass"
           placeholder={t("contact.5")}></textarea>
       </div>
       <button
@@ -84,8 +84,6 @@ const t = useTranslations(lang);
 <style>
   .glass {
     background-color: rgba(169, 85, 247, 0.082);
-    backdrop-filter: blur(19px) saturate(180%);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
+    backdrop-filter: blur(19px) saturate(160%);
+    border-radius: 12px;  }
 </style>
