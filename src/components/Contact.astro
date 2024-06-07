@@ -11,17 +11,24 @@ const t = useTranslations(lang);
       name="contact"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       class="space-y-8"
-      onsubmit="return submitForm(event)"
     >
       <input type="hidden" name="form-name" value="contact" />
+      <p style="display: none;">
+        <label
+          >Don’t fill this out if you’re human: <input
+            name="bot-field"
+          /></label
+        >
+      </p>
       <div>
         <label
           for="email"
           class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
         >
-          {t("contact.1")}</label
-        >
+          {t("contact.1")}
+        </label>
         <input
           name="email"
           type="email"
@@ -35,8 +42,9 @@ const t = useTranslations(lang);
         <label
           for="subject"
           class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
-          >{t("contact.2")}</label
         >
+          {t("contact.2")}
+        </label>
         <input
           name="subject"
           type="text"
@@ -50,19 +58,21 @@ const t = useTranslations(lang);
         <label
           for="message"
           class="block mb-2 text-sm font-medium text-purple-100 dark:text-gray-300"
-          >{t("contact.4")}</label
         >
+          {t("contact.4")}
+        </label>
         <textarea
           name="message"
           id="message"
           rows="6"
-          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400  dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500"
+          class="shadow-sm bg-gray-900 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-100 dark:focus:border-yellow-100 dark:shadow-sm-light border-b border-purple-500"
           placeholder={t("contact.5")}></textarea>
       </div>
       <button
         type="submit"
         class="flex items-center align-center gap-3 py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-purple-300 sm:w-fit hover:bg-opacity-70 focus:ring-4 focus:outline-none hover:scale-105 focus:ring-primary-300 dark:bg-primary-600 dark:hover:opacity-70 dark:focus:ring-primary-800 transition duration-150"
-        >{t("contact.6")}
+      >
+        {t("contact.6")}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -74,19 +84,14 @@ const t = useTranslations(lang);
           stroke-linecap="round"
           stroke-linejoin="round"
           class="icon icon-tabler icons-tabler-outline icon-tabler-send"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M10 14l11 -11"></path><path
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 14l11 -11"></path>
+          <path
             d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"
-          ></path></svg
-        ></button
-      >
+          ></path>
+        </svg>
+      </button>
     </form>
   </div>
 </section>
-
-<script>
-  function submitForm(event: Event) {
-    event.preventDefault();
-    return true;
-  }
-</script>
