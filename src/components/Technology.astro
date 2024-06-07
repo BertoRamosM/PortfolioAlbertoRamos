@@ -54,7 +54,7 @@ const ICONS = [
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.6rem;
+  
     opacity: 0;
     transition: opacity 0.3s ease;
     font-family: "Roboto", sans-serif;
@@ -71,10 +71,11 @@ const ICONS = [
     }
 
     .icon-text {
-      font-size: 1.2rem;
+     
     }
   }
   .glass {
+    background-color: rgba(169, 85, 247, 0.082);
     backdrop-filter: blur(19px) saturate(180%);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -87,9 +88,9 @@ const ICONS = [
   >
     {
       ICONS.map((item) => (
-        <div class="p-4 icon-container glass">
+        <div class="p-2 icon-container glass">
           <item.icon class="size-10 icon" />
-          <span class="icon-text text-white extra-bold text-center">
+          <span class="icon-text text-white extra-bold text-center text-md font-bold">
             {item.name}
           </span>
         </div>

@@ -45,11 +45,10 @@ const t = useTranslations(lang);
     >
       <div class="flex flex-col items-center">
         <h1 class="text-6xl text-purple-500 mb-4">
-          Thank you for reaching out!
+          {t("success.1")}
         </h1>
         <h3 class="mb-4 text-2xl">
-          Your message has been successfully submitted. I'll get back to you as
-          soon as possible.
+          {t("success.2")}
         </h3>
         <div>
           <button
@@ -70,7 +69,8 @@ const t = useTranslations(lang);
               ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                 d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path
                 d="M5 12l6 -6"></path></svg
-            >Back to the previous page</button
+            >
+            {t("success.3")}</button
           >
         </div>
       </div>
