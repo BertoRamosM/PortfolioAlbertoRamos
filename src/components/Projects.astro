@@ -18,7 +18,7 @@ import ZustandIcon from "../icons/ZustandIcon.astro";
 const TECHS = {
   REACT: {
     name: "React",
-    class: "bg-blue-900 text-white border-2 border-blue-400",
+    class: "bg-purple-900 text-white border-2 border-purple-400",
     icon: ReactIcon,
     link: "https://react.dev/",
   },
@@ -134,7 +134,7 @@ const PROJECTS = [
           <a href={link} target="_blank">
             <h3 class="text-3xl font-semibold text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
               {title}
-              <span class="text-blue-300 text-2xl">{subtitle}</span>
+              <span class="text-purple-300 text-2xl">{subtitle}</span>
             </h3>
           </a>
           <p class="text-m mb-4 text-pretty">{description}</p>
@@ -144,7 +144,7 @@ const PROJECTS = [
                 <a
                   href={tag.link}
                   target="_blank"
-                  class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass hover:text-blue-300`}
+                  class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass hover:text-purple-300`}
                 >
                   {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 
@@ -159,7 +159,7 @@ const PROJECTS = [
                 loading="lazy"
                 src={image}
                 alt={`Screenshot from project ${title}`}
-                class="rounded shadow-2xl shadow-blue-500/30 hover:scale-105 transition-transform duration-300 ease-in-out glass"
+                class="rounded shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 ease-in-out glass"
               />
             </a>
             {state.status === false ? (
@@ -167,7 +167,7 @@ const PROJECTS = [
                 {state.name}
               </span>
             ) : (
-              <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-blue-500">
+              <span class="absolute top-3 right-3 bg-opacity-75 text-white text-sm px-2 py-1 rounded-bl rounded-tr bg-purple-500">
                 {state.name}
               </span>
             )}
@@ -178,7 +178,7 @@ const PROJECTS = [
                 href={link}
                 target="_blank"
                 class="rounded-full border border-white/10 gap-x-3
-  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex item-center justify-center hover:text-blue-300 glass"
+  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex item-center justify-center hover:text-purple-300 glass"
               >
                 <Live class="size-6" />
                 {t("proj.8")}
@@ -189,7 +189,7 @@ const PROJECTS = [
               <a
                 href={github}
                 target="_blank"
-                class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-blue-300 item-center glass"
+                class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center glass"
               >
                 <Github class="size-5" />
                 Github
