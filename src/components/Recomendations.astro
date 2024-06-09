@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
-import chevalierPic from "../../public/images/Chevalier.jpg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,14 +8,12 @@ const RECOMENDATIONS = [
   {
     picture: "/images/Chevalier.jpg",
     name: "Chris Chevalier",
-    punch:
-      "Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.",
-    review:
-      "En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.",
+    punch: `“Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
+    review: `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.”`,
     title: "Open Class Rooms Tutor",
     email: "chevalier@chris-freelance.com",
   },
-  /* {
+  /*  {
     picture: "../../public/images/Chevalier.jpg",
     name: "Chris Chevalier",
     punch:
@@ -25,7 +22,7 @@ const RECOMENDATIONS = [
       "En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.",
     title: "Open Class Rooms Tutor",
     email: "chevalier@chris-freelance.com",
-  }, */
+  },  */
 ];
 ---
 
@@ -35,7 +32,7 @@ const RECOMENDATIONS = [
   {
     RECOMENDATIONS.map((recomendation) => {
       return (
-        <figure class="flex flex-col items-center p-8 bg-transparent border-slate-400 rounded-t-lg md:rounded-t-none  border mb-8">
+        <figure class="flex flex-col items-center p-8 bg-transparent border-slate-400 rounded-t-lg md:rounded-t-none  border ">
           <blockquote class="max-w-2xl mx-auto mb-4 text-gray-200 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-300 ">
               {recomendation.punch}

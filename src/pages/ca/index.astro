@@ -8,6 +8,7 @@ import CodeIcon from "../../icons/CodeIcon.astro";
 import Projects from "../../components/Projects.astro";
 import TechIcon from "../../icons/TechIcon.astro";
 import Technology from "../../components/Technology.astro";
+import Recomendations from "../../components/Recomendations.astro";
 
 import Languages from "../../components/Languages.astro";
 import UserIcon from "../../icons/UserIcon.astro";
@@ -15,6 +16,7 @@ import About from "../../components/About.astro";
 import Contact from "../../components/Contact.astro";
 import ContactIcon from "../../icons/ContactIcon.astro";
 import LanguageIcon from "../../icons/LanguageIcon.astro";
+import RecommendationIcon from "../../icons/RecommendationIcon.astro";
 ---
 
 <Layout
@@ -31,14 +33,16 @@ import LanguageIcon from "../../icons/LanguageIcon.astro";
       />
 
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+        class="text-white text-5xl font-bold flex gap-x-1 md:gap-x-4 pb-6 lg:pb-10"
       >
-        Alberto Ramos <span class="text-purple-400 text-2xl self-end"
+        <span class="w-max-content">Alberto Ramos</span>
+        <span
+          class="text-purple-400 text-xl sm:text-2xl self-end justify-self-end"
           >Front End Developer</span
         >
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span class="text-yellow-200"
+        <span class="text-yellow-100"
           >Gran apassionat de la tecnologia i el desenvolupament front end i el
           hardware.</span
         >
@@ -89,6 +93,13 @@ import LanguageIcon from "../../icons/LanguageIcon.astro";
           <LanguageIcon class="size-9" />Idiomes
         </h2>
         <Languages />
+      </section>
+
+      <section id="contact" class="w-full mx-auto lg:w-[740px] pt-10">
+        <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center">
+          <RecommendationIcon class="size-9" />Recommendations
+        </h2>
+        <Recomendations />
       </section>
 
       <section id="contact" class="w-full mx-auto lg:w-[740px] pt-10">
