@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 
 const RECOMENDATIONS = [
   {
-    picture: "../../public/images/Chevalier.jpg",
+    picture: "/images/Chevalier.jpg",
     name: "Chris Chevalier",
     punch:
       "Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.",
@@ -29,11 +29,13 @@ const RECOMENDATIONS = [
 ];
 ---
 
-<div class="py-8 lg:py-12 px-4 mx-auto max-w-screen-md flex gap-8 flex-col md:flex-row">
+<div
+  class="py-8 lg:py-12 px-4 mx-auto max-w-screen-md flex gap-8 flex-col md:flex-row"
+>
   {
     RECOMENDATIONS.map((recomendation) => {
       return (
-        <figure class="flex flex-col items-center p-8 bg-slate-950 border-slate-400 rounded-t-lg md:rounded-t-none  border mb-8">
+        <figure class="flex flex-col items-center p-8 bg-transparent border-slate-400 rounded-t-lg md:rounded-t-none  border mb-8">
           <blockquote class="max-w-2xl mx-auto mb-4 text-gray-200 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-300 ">
               {recomendation.punch}
