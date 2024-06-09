@@ -8,6 +8,7 @@ import CodeIcon from "../icons/CodeIcon.astro";
 import Projects from "../components/Projects.astro";
 import TechIcon from "../icons/TechIcon.astro";
 import Technology from "../components/Technology.astro";
+import Recomendations from "../components/Recomendations.astro";
 
 import Languages from "../components/Languages.astro";
 import UserIcon from "../icons/UserIcon.astro";
@@ -15,6 +16,7 @@ import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
 import ContactIcon from "../icons/ContactIcon.astro";
 import LanguageIcon from "../icons/LanguageIcon.astro";
+import RecommendationIcon from "../icons/RecommendationIcon.astro";
 ---
 
 <Layout
@@ -22,9 +24,9 @@ import LanguageIcon from "../icons/LanguageIcon.astro";
   description="Hire Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
 >
   <main class="relative px-4">
-    <section id="top" class="w-full mx-auto lg:w-[740px] py-32">
+    <section id="top" class="w-full mx-auto lg:w-[740px] py-36 flex flex-col">
       <img
-        class="object-cover rounded-full size-36 mb-10"
+        class="object-cover rounded-full size-40 mb-10 my-8 self-center"
         src="../../images/cvpic3.webp"
         alt="picture of Alberto Ramos"
         loading="eager"
@@ -33,20 +35,13 @@ import LanguageIcon from "../icons/LanguageIcon.astro";
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Alberto Ramos
-        <a
-          href="https://www.linkedin.com/in/alberto-ramos-munoz-372000105/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center hover:scale-105 transition"
-        >
-          <Badge>Available to work</Badge></a
+        Alberto Ramos <span class="text-purple-400 text-2xl self-end"
+          >Front End Developer</span
         >
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span>Front End Web Developer.</span>
         <span class="text-yellow-200"
-          >Great passionate about technology and front end development and
+          >Great passionate about technology, front end development and
           hardware.</span
         >
         <span class="text-purple-300"> From Barcelona, Spain.</span>
@@ -103,6 +98,13 @@ import LanguageIcon from "../icons/LanguageIcon.astro";
           <ContactIcon class="size-9" />Contact me
         </h2>
         <Contact />
+      </section>
+
+      <section id="contact" class="w-full mx-auto lg:w-[740px] pt-10">
+        <h2 class="text-2xl font-semibold mt-20 flex gap-x-3 items-center">
+          <RecommendationIcon class="size-9" />Recommendations
+        </h2>
+        <Recomendations />
       </section>
     </section>
   </main>
