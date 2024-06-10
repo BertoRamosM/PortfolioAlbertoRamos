@@ -3,51 +3,65 @@ import Linkedin from "../icons/Linkedin.astro";
 import Github from "../icons/Github.astro";
 import Email from "../icons/Email.astro";
 import CVIcon from "../icons/CVIcon.astro";
+
+import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<nav class="flex gap-4 pt-8 align-center mt-8 flex-wrap">
-  <a
-    href="https://www.linkedin.com/in/alberto-ramos-munoz-372000105/"
-    target="_blank"
-    class="rounded-full border border-white/10 gap-x-3
-  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 hover:text-purple-300 transition flex item-center justify-center border-purple-300 glass"
-  >
-    <Linkedin class="size-6" />
-    Linkedin
-  </a>
-  <a
-    href="https://github.com/BertoRamosM/"
-    target="_blank"
-    class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
-  >
-    <Github class="size-6" />
-    Github
-  </a>
+<nav class="pt-8">
+  <div>
+    <h2>
+      {t("social.1")}
+      <span class="text-purple-300">{t("social.2")} </span>
+      <span class="text-yellow-100"> {t("social.3")} </span>
+    </h2>
 
-  <a
-    href="mailto:bertoramos@proton.me"
-    target="_blank"
-    class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
-  >
-    <Email class="size-6" />
-    bertoramos@proton.me
-  </a>
+    <div class="flex gap-4 align-center mt-2 flex-wrap">
+      <a
+        href="https://www.linkedin.com/in/alberto-ramos-munoz-372000105/"
+        target="_blank"
+        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
+      >
+        <Linkedin class="size-6" />
+        Linkedin
+      </a>
+      <a
+        href="https://github.com/BertoRamosM/"
+        target="_blank"
+        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
+      >
+        <Github class="size-6" />
+        Github
+      </a>
 
-  <a
-    href="https://raw.githubusercontent.com/BertoRamosM/CV2024/main/AlbertoRamosCV2024.pdf"
-    download="AlbertoRamosCV2024.pdf"
-    class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
-  >
-    <CVIcon class="size-6" />
-    CV
-  </a>
+      <a
+        href="mailto:bertoramos@proton.me"
+        target="_blank"
+        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
+      >
+        <Email class="size-6" />
+        bertoramos@proton.me
+      </a>
+
+      <a
+        href="https://raw.githubusercontent.com/BertoRamosM/CV2024/main/AlbertoRamosCV2024.pdf"
+        download="AlbertoRamosCV2024.pdf"
+        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center border-purple-300 glass"
+      >
+        <CVIcon class="size-6" />
+        CV
+      </a>
+    </div>
+  </div>
+
+  <style>
+    .glass {
+      background-color: transparent;
+      backdrop-filter: blur(19px) saturate(180%);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+    }
+  </style>
 </nav>
-
-<style>
-  .glass {
-    background-color: transparent;
-    backdrop-filter: blur(19px) saturate(180%);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
-</style>
