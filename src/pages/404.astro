@@ -1,0 +1,74 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+import "@fontsource-variable/onest";
+
+const { currentLocale } = Astro;
+---
+
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Hire Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and functional web applications."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+
+    <title>Alberto Ramos Portfolio | Web Developer and Programmer</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: "Onest Variable", system-ui, sans-serif;
+      }
+      main {
+        font-family: "Onest Variable", system-ui, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body
+    class="relative h-full w-full bg-slate-950 flex justify-center items-center"
+  >
+    <main
+      class="flex flex-col h-full w-full justify-center items-center text-center bg-slate-950 text-white"
+    >
+      <div class="flex flex-col items-center">
+        <h1 class="text-6xl text-purple-400 mb-4">404</h1>
+        <h3 class="mb-4 text-2xl">Something's missing.</h3>
+        <p>
+          Sorry, we can't find that page. You'll find lots to explore on the
+          home page.
+        </p>
+        <div>
+          <button
+            onclick="history.back()"
+            class="text-yellow-200 hover:underline flex justify-center items-center gap-8"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path
+                d="M5 12l6 -6"></path></svg
+            >
+            Back to home page</button
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
