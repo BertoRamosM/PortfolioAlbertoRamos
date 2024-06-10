@@ -32,33 +32,38 @@ const { currentLocale } = Astro;
     <title>{title}</title>
   </head>
 
-  
   <body class="relative h-full w-full bg-slate-950">
-
+    
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
+      >
+      </div>
+  
     <Header />
     <slot />
     <Footer />
-  </body>
-  <style is:global>
-    :root {
-    }
 
-    html {
-      font-family: "Onest Variable", system-ui, sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      color: white;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
+    <style is:global>
+      :root {
       }
-    }
-  </style>
+
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        color: white;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </body>
 </html>
