@@ -33,16 +33,25 @@ const { currentLocale } = Astro;
   </head>
 
   <body class="relative h-full w-full bg-slate-950">
-    
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
-      >
-      </div>
-  
+    <div
+      class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
+    >
+    </div>
+
     <Header />
     <slot />
     <Footer />
 
+    <div class="fixed inset-x-0 bottom-0 isolate z-[10] h-[60px]">
+      <div class="gradient-mask-t-0 absolute inset-0 backdrop-blur-[1px]">
+      </div><div class="gradient-mask-t-0 absolute inset-0 backdrop-blur-[2px]">
+      </div><div class="gradient-mask-t-0 absolute inset-0 backdrop-blur-[3px]">
+      </div><div class="gradient-mask-t-0 absolute inset-0 backdrop-blur-[6px]">
+      </div><div
+        class="gradient-mask-t-0 absolute inset-0 backdrop-blur-[12px]"
+      >
+      </div>
+    </div>
     <style is:global>
       :root {
       }
@@ -63,6 +72,10 @@ const { currentLocale } = Astro;
         html {
           scroll-behavior: auto;
         }
+      }
+
+      .background_gradient {
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
       }
     </style>
   </body>

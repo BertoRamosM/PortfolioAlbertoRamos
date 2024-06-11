@@ -12,21 +12,28 @@ const t = useTranslations(lang);
 
 <nav class="pt-8">
   <div>
-    <h2>
-      {t("social.1")}
-      <span class="text-purple-300">{t("social.2")} </span>
-      <span class="text-yellow-100"> {t("social.3")} </span>
-    </h2>
-
-    
+    <p class="mt-2">
+      <span
+        class="inline-flex items-center px-2 py-0 text-xs font-semibold rounded-md pointer-events-auto body-primary box-gen"
+        ><span class="mr-1.5 flex h-3 w-3 items-center"
+          ><span
+            class="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75 bg-lime-400"
+          ></span><span
+            class="relative inline-flex h-2 w-2 rounded-full bg-lime-400"
+          ></span></span
+        >{t("social.1")}</span
+      >
+    </p>
 
     <div class="flex gap-4 align-center mt-2 flex-wrap">
+      
       <a
         href="https://www.linkedin.com/in/alberto-ramos-munoz-372000105/"
         target="_blank"
-        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center glass "
+        class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-300 item-center glass"
       >
         <Linkedin class="size-6" />
+
         Linkedin
       </a>
       <a
