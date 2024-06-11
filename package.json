@@ -16,6 +16,7 @@
     "@fontsource-variable/onest": "^5.0.2",
     "astro": "^4.4.4",
     "astro-navbar": "^2.3.2",
+    "react-icon-cloud": "^4.1.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
