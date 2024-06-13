@@ -64,8 +64,8 @@ export const ui = {
     "success.2": `Your message has been successfully submitted. I'll get back to you as soon as possible.`,
     "success.3": `Back to the previous page`,
     "social.1": `Available for new projects`,
-    "recom.1": `“Alberto is a student whose personal and professional qualities deserve to be highlighted.`,
-    "recom.2": `In summary, he is a very interesting candidate who will undoubtedly bring significant added value to your company or project.”`,
+    "recom.1": `Alberto is a student whose personal and professional qualities deserve to be highlighted.`,
+    "recom.2": `In summary, he is a very interesting candidate who will undoubtedly bring significant added value to your company or project.`,
   },
   es: {
     "header.education": "Educación",
@@ -123,8 +123,8 @@ export const ui = {
     "success.2": `Su mensaje ha sido enviado y Me comunicaré contigo lo antes posible.`,
     "success.3": `Volver a la página anterior`,
     "social.1": `Disponible para nuevos proyectos`,
-    "recom.1": `“Alberto es un estudiante cuyas cualidades personales y profesionales merecen ser destacadas.`,
-    "recom.2": `En resumen, es un candidato muy interesante que sin duda aportará un valor añadido significativo a su empresa o proyecto.”`,
+    "recom.1": `Alberto es un estudiante cuyas cualidades personales y profesionales merecen ser destacadas.`,
+    "recom.2": `En resumen, es un candidato muy interesante que sin duda aportará un valor añadido significativo a su empresa o proyecto.`,
   },
   ca: {
     "header.education": "Educació",
@@ -183,8 +183,8 @@ export const ui = {
     "success.2": `El seu missatge ha estat enviat i em comunicaré amb tu el més aviat possible.`,
     "success.3": `Torna a la pàgina anterior`,
     "social.1": `Disponible per a nous projectes`,
-    "recom.1": `“L'Alberto és un estudiant les qualitats personals i professionals del qual mereixen ser destacades.`,
-    "recom.2": `En resum, és un candidat molt interessant que sens dubte aportarà un valor afegit significatiu a la seva empresa o projecte.”`,
+    "recom.1": `L'Alberto és un estudiant les qualitats personals i professionals del qual mereixen ser destacades.`,
+    "recom.2": `En resum, és un candidat molt interessant que sens dubte aportarà un valor afegit significatiu a la seva empresa o projecte.`,
   },
   fr: {
     "header.education": "Éducation",
@@ -243,7 +243,7 @@ export const ui = {
     "success.2": `Votre message a été envoyé et je vous répondrai dans les plus brefs délais.`,
     "success.3": `Retournez à la page précédente`,
     "social.1": `Disponible pour de nouveaux projets`,
-    "recom.1": `“Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
-    "recom.2": `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.”`,
+    "recom.1": `Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
+    "recom.2": `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.`,
   },
 } as const;
