@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BlogCard from "./BlogCard.astro";
+import BlogSearch from "./BlogSearch.astro";
+
+const allArticles: CollectionEntry<"blog">[] = await getCollection("blog");
+
+const allBlogArticles = allArticles.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
+---
+
+<div class="h-full grid grid-cols-1 gap-12 border-l-2 border-purple-400/20 pl-4 pb-20">
+  <BlogSearch />
+  {
+    allBlogArticles?.map((item) => (
+      <BlogCard article={item} />
+    ))
+  }
+</div>
