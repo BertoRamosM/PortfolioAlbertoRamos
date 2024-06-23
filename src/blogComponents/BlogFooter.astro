@@ -1,24 +1,67 @@
-<div>
-  <button
-    onclick="history.back()"
-    class="hover:underline flex justify-center items-center gap-8 border-2 rounded-full p-2 border-purple-400 hover:opacity-70"
+---
+import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+import ArrowUp from "../icons/ArrowUp.astro";
+---
+
+<style>
+  footer {
+    backdrop-filter: blur(19px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+</style>
+
+<footer
+  class="mt-20 rounded-lg shadow w-full mx-auto xl:w-full z-50 p-6 sm:text-md bg-purple-900/10"
+>
+  <div
+    class="w-full mx-auto max-w-screen-xl md:flex md:items-center md:justify-between"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+    <button
+      onclick="history.back()"
+      class="hover:scale-105 flex justify-center items-center gap-8 border-2 rounded-full border-purple-400 hover:opacity-70"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M5 12l14 0"></path>
-      <path d="M5 12l6 6"></path>
-      <path d="M5 12l6 -6"></path>
-    </svg>
-  </button>
-</div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l14 0"></path>
+        <path d="M5 12l6 6"></path>
+        <path d="M5 12l6 -6"></path>
+      </svg>
+    </button>
+    <span class="text-md sm:text-center text-white-100/90"
+      >© 2024 <a
+        href="https://github.com/BertoRamosM/"
+        target="_blank"
+        class=" hover:text-purple-300"
+        >Alberto Ramos . <span class="sm:hidden"> | </span>{t("footer.1")}
+      </a></span
+    >
+
+    <ul
+      class="flex flex-wrap items-center mt-3 font-medium text-white-100/90 sm:mt-0"
+    >
+      <li>
+        <a
+          href="#"
+          class="hover:text-purple-300 me-4 md:me-6 flex items-center gap-2 justify-center border-2 rounded-full border-purple-400 hover:opacity-70 px-2"
+          >{t("footer.4")} <ArrowUp class="animate-bounce" /></a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
