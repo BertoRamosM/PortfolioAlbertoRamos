@@ -34,7 +34,7 @@ const { Content } = await entry.render();
   title=`${entry.data.title} - Blog Alberto Ramos - Web Developer`
   description="Welcome to the blog of Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
 >
-  <div>
+  <div class="">
     <div class="pt-24 sticky">
       <button
         onclick="history.back()"
@@ -61,14 +61,15 @@ const { Content } = await entry.render();
     </div>
 
     <div class="text-pretty">
-      <div class="flex flex-col pt-24 gap-2">
+      <div class="flex flex-col pt-24 gap-1">
         <h1 class="text-5xl font-black">{entry.data.title}</h1>
+        <h6 class="py-0">{entry.data.author}</h6>
 
         <span class="flex gap-2"><Clock />{entry.data.time}</span>
         <div class="gap-4">
           {
             entry.data.tags.map((tag: String[]) => (
-              <span class="w-full px-2 py-1 mr-2 bg-transparent border-2 border-white/80 text-white/90 rounded-full text-xs hover:opacity-90 hover:text-purple-300 cursor-pointer  transition-all duration-100 hover:border-purple-500">
+              <span class="w-full px-2 py-1 mr-2 mt-2 bg-transparent border-2 border-white/80 text-white/90 rounded-full text-xs hover:opacity-90 hover:text-purple-300 cursor-pointer  transition-all duration-100 hover:border-purple-500">
                 <a href={`/articles/tag` + tag}>#{tag}</a>
               </span>
             ))
@@ -102,5 +103,13 @@ const { Content } = await entry.render();
   h2 {
     margin: 20px 0px;
     font-size: 1.6rem;
+  }
+
+  h3{
+    margin: 20px 0px;
+    font-size: 1.3rem;
+  }
+  .styled-link{
+    color: rgb(228, 158, 228);
   }
 </style>
