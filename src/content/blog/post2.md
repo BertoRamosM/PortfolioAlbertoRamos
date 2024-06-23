@@ -9,11 +9,9 @@ slug: "introduction-to-js"
 ---
 
 
-### Post 2: JavaScript Basics
 
-**File Name:** `javascript-basics.md`
 
-```markdown
+
 # JavaScript Basics
 
 ## What is JavaScript?

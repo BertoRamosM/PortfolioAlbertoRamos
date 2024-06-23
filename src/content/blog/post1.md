@@ -14,7 +14,7 @@ slug: "introduction-to-html-and-css"
 HTML (HyperText Markup Language) is the standard markup language used to create web pages. It provides the structure of a webpage, allowing you to define elements such as headings, paragraphs, links, images, and more.
 
 ### Basic HTML Structure
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
