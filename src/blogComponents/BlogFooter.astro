@@ -5,6 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 import ArrowUp from "../icons/ArrowUp.astro";
+import Home from "../icons/Home.astro";
 ---
 
 <style>
@@ -19,11 +20,11 @@ import ArrowUp from "../icons/ArrowUp.astro";
   class="mt-14 rounded-lg shadow w-full z-50 p-6 sm:text-md bg-purple-900/10"
 >
   <div
-    class="w-full flex justify-between"
+    class="w-full flex gap-4 justify-between"
   >
     <button
       onclick="history.back()"
-      class="hover:scale-105 flex justify-center items-center gap-8 border-2 rounded-full border-purple-400 hover:opacity-70"
+      class="hover:scale-105 flex justify-center items-center gap-8 sm:border-2 rounded-full border-purple-400 hover:opacity-70"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,18 +49,19 @@ import ArrowUp from "../icons/ArrowUp.astro";
         href="https://github.com/BertoRamosM/"
         target="_blank"
         class=" hover:text-purple-300"
-        >Alberto Ramos . <span class="sm:hidden"> | </span>{t("footer.1")}
-      </a></span
+        >Alberto Ramos. <span class="sm:hidden"> </span>{t("footer.1")}
+      </a>
+      </span
     >
 
     <ul
       class="flex flex-wrap items-center mt-3 font-medium text-white-100/90 sm:mt-0"
     >
-      <li>
+      <li class="">
         <a
           href="#"
-          class="hover:text-purple-300 me-4 md:me-6 flex items-center gap-2 justify-center border-2 rounded-full border-purple-400 hover:opacity-70 px-2"
-          >{t("footer.4")} <ArrowUp class="animate-bounce" /></a
+          class=" hover:text-purple-300 me-4 md:me-6 flex flex-col sm:flex-row items-center gap-2 justify-center sm:border-2 rounded-full border-purple-400 hover:opacity-70 px-2"
+          >Top <ArrowUp class="animate-bounce" /></a
         >
       </li>
     </ul>

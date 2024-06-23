@@ -4,7 +4,6 @@ interface Props {
 }
 import "@fontsource-variable/onest";
 
-
 import { ViewTransitions } from "astro:transitions";
 
 import "@fontsource-variable/onest";
@@ -34,7 +33,9 @@ const { currentLocale } = Astro;
     <title>{title}</title>
   </head>
 
-  <body class="relative h-full w-full bg-slate-950 mx-auto lg:w-[740px] px-4 lg:px-0">
+  <body
+    class="relative h-full w-full bg-slate-950 mx-auto lg:w-[740px] px-4 lg:px-0 scrollbar-webkit"
+  >
     <div class="fixed inset-x-0 top-0 isolate z-[10] h-[50px]">
       <div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]">
       </div><div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]">
