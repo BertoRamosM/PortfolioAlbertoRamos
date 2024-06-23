@@ -32,7 +32,7 @@ const { currentLocale } = Astro;
     <title>{title}</title>
   </head>
 
-  <body class="relative h-full w-full bg-slate-950 mx-auto lg:w-[740px]">
+  <body class="relative h-full w-full back mx-auto lg:w-[740px] px-4 lg:px-0">
     <div class="fixed inset-x-0 top-0 isolate z-[10] h-[50px]">
       <div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]">
       </div><div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]">
@@ -82,9 +82,8 @@ const { currentLocale } = Astro;
       .back {
         background: linear-gradient(
           109.6deg,
-          rgb(36, 45, 57) 11.2%,
-          rgb(16, 37, 60) 51.2%,
-          rgb(0, 0, 0) 98.6%
+          rgba(0, 0, 0, 0.93) 11.2%,
+          rgb(63, 61, 61) 78.9%
         );
       }
     </style>

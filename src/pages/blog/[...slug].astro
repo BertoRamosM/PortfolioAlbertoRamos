@@ -1,0 +1,56 @@
+---
+interface Props {
+  children: any;
+  description: string;
+  title: string;
+  entry: any;
+}
+
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allBlogArticles: CollectionEntry<"blog">[] =
+    await getCollection("blog");
+
+  return allBlogArticles.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<BlogLayout
+  title=`Blog Alberto Ramos - ${entry.data.title} - Web Developer`
+  description="Welcome to the blog of Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
+>
+  <div class="pt-40">
+    <button
+      onclick="history.back()"
+      class="hover:underline flex justify-center items-center gap-8 border-2 rounded-full p-2 border-purple-400 hover:opacity-70"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"
+        ></path></svg
+      >
+    </button>
+  </div>
+  <h1 class="pt-40">{entry.data.title}</h1>
+</BlogLayout>

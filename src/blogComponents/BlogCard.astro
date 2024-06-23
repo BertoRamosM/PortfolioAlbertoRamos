@@ -9,7 +9,7 @@ const { article } = Astro.props;
   <div class="p-6">
     <h2 class="text-lg sm:text-2xl font-semibold mb-2">
       <a
-        href={`/${article.slug}`}
+        href={`/blog/${article.slug}`}
         class="group-hover:text-purple-500 cursor-pointer transition-all duration-100"
       >
         {article.data.title}

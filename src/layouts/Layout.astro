@@ -1,8 +1,4 @@
 ---
-interface Props {
-  title: string;
-}
-
 import { ViewTransitions } from "astro:transitions";
 
 import "@fontsource-variable/onest";
@@ -32,11 +28,7 @@ const { currentLocale } = Astro;
     <title>{title}</title>
   </head>
 
-  <body class="relative h-full w-full bg-slate-950">
-    <div
-      class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
-    >
-    </div>
+  <body class="relative h-full w-full back">
     <div class="fixed inset-x-0 top-0 isolate z-[10] h-[50px]">
       <div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]">
       </div><div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]">
@@ -76,6 +68,13 @@ const { currentLocale } = Astro;
         flex-direction: column;
         min-height: 100vh;
         color: white;
+      }
+      .back {
+        background: linear-gradient(
+          109.6deg,
+          rgba(0, 0, 0, 0.93) 11.2%,
+          rgb(63, 61, 61) 78.9%
+        );
       }
 
       @media (prefers-reduced-motion: reduce) {
