@@ -5,6 +5,7 @@ interface Props {
   title: string;
   entry: any;
 }
+import { Image } from "astro:assets";
 import Clock from "../../icons/Clock.astro";
 
 import BlogLayout from "../../layouts/BlogLayout.astro";
@@ -26,7 +27,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
-const {Content} = await entry.render();
+const { Content } = await entry.render();
 ---
 
 <BlogLayout
@@ -34,7 +35,7 @@ const {Content} = await entry.render();
   description="Welcome to the blog of Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
 >
   <div>
-    <div class="pt-40 sticky">
+    <div class="pt-24 sticky">
       <button
         onclick="history.back()"
         class="hover:underline flex justify-center items-center gap-8 border-2 rounded-full p-2 border-purple-400 hover:opacity-70"
@@ -59,9 +60,9 @@ const {Content} = await entry.render();
       </button>
     </div>
 
-    <div>
+    <div class="text-pretty">
       <div class="flex flex-col pt-24 gap-2">
-        <h1 class="text-4xl text-purple-400">{entry.data.title}</h1>
+        <h1 class="text-5xl font-black">{entry.data.title}</h1>
 
         <span class="flex gap-2"><Clock />{entry.data.time}</span>
         <div class="gap-4">
@@ -74,7 +75,16 @@ const {Content} = await entry.render();
           }
         </div>
       </div>
-      <div class="prose pt-20 pb-32">
+      <div class="w-full flex items-center pt-12">
+        <Image
+          src={entry.data.image}
+          alt={entry.data.title}
+          height={200}
+          width={500}
+          class="cover rounded-xl"
+        />
+      </div>
+      <div class="prose pt-12 pb-32">
         <Content />
       </div>
       <!-- end -->
@@ -82,15 +92,14 @@ const {Content} = await entry.render();
   </div>
 </BlogLayout>
 
-
 <style is:global>
-  p{
+  p {
     margin: 20px 0px;
   }
-  h1{
+  h1 {
     font-size: 2rem;
   }
-  h2{
+  h2 {
     margin: 20px 0px;
     font-size: 1.6rem;
   }

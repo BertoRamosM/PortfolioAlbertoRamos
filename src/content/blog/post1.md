@@ -2,13 +2,11 @@
 title: "Introduction to HTML and CSS"
 pubDate: "2024-06-21"
 author: "John Doe"
-image: "/images/postImages/html.jpg"
+image: "/blog/robot.png"
 tags: ["HTML", "CSS", "Web Development"]
 time: "5 min"
 slug: "introduction-to-html-and-css"
 ---
-
-# Introduction to HTML and CSS
 
 ## What is HTML?
 HTML (HyperText Markup Language) is the standard markup language used to create web pages. It provides the structure of a webpage, allowing you to define elements such as headings, paragraphs, links, images, and more.
