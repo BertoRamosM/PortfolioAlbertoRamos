@@ -4,6 +4,7 @@ pubDate: "2024-06-23"
 author: "Alice Johnson"
 image: "/images/postImages/rd.webp"
 tags: ["Responsive Design", "CSS", "Web Development"]
+time: "5 min"
 slug: "responsive-web-design"
 ---
 ### Post 3: Responsive Web Design

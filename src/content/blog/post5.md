@@ -4,6 +4,7 @@ pubDate: "2025-12-25"
 author: "Emma Davis"
 image: "/images/postImages/api.png"
 tags: ["APIs", "JavaScript", "Web Development"]
+time: "5 min"
 slug: "working-with-apis"
 ---
 

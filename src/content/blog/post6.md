@@ -4,6 +4,7 @@ pubDate: "2024-06-26"
 author: "William Lee"
 image: "/images/postImages/node.png"
 tags: ["Back-End", "Web Development", "Node.js", "Django"]
+time: "5 min"
 slug: "introduction-to-back-end-development"
 ---
 

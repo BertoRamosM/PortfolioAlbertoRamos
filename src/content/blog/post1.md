@@ -4,6 +4,7 @@ pubDate: "2024-06-21"
 author: "John Doe"
 image: "/images/postImages/html.jpg"
 tags: ["HTML", "CSS", "Web Development"]
+time: "5 min"
 slug: "introduction-to-html-and-css"
 ---
 

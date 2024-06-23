@@ -4,6 +4,7 @@ pubDate: "2024-06-22"
 author: "John Doe"
 image: "/images/postImages/js.png"
 tags: ["JS", "Web Development"]
+time: "5 min"
 slug: "introduction-to-js"
 ---
 

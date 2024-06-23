@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import content from "@astro/content";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -9,7 +8,7 @@ export default defineConfig({
     port: 4567,
     host: "localhost",
   },
-  integrations: [tailwind(), content()],
+  integrations: [tailwind()],
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es", "ca", "fr"],

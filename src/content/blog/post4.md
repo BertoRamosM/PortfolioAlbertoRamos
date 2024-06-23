@@ -4,6 +4,7 @@ pubDate: "2024-06-24"
 author: "Michael Brown"
 image: "/images/postImages/react.png"
 tags: ["Front-End", "Frameworks", "Web Development"]
+time: "5 min"
 slug: "introduction-to-front-end-frameworks"
 ---
 
