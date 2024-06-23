@@ -1,5 +1,6 @@
 ---
 const { article } = Astro.props;
+import Tags from "./Tags.astro"
 ---
 
 <div
@@ -17,15 +18,7 @@ const { article } = Astro.props;
     <p class="text-gray-200 text-sm mb-4 border-l-2 px-2">
       {new Date(article.data.pubDate).toLocaleDateString()}
     </p>
-    <div class="flex gap-4 flex-wrap">
-      {
-        article.data.tags.map((tag: String[]) => (
-          <span class="px-2 py-1 bg-transparent border-2 border-white text-white rounded-full text-xs hover:opacity-90 hover:text-purple-300 cursor-pointer  transition-all duration-100 hover:border-purple-500">
-            <a href={`/articles/tag` + tag}>#{tag}</a>
-          </span>
-        ))
-      }
-    </div>
+   <Tags tags={article.data.tags}/>
     <p class="mt-4 text-white/80 mb-4">{article.data.desc}</p>
     <a
       href={`/blog/${article.slug}`}

@@ -1,6 +1,6 @@
 ---
 title: "View Transitions"
-desc: "Introduction the view transition animation. An elegant animation that triggers when navigating a site."
+desc: "Introducing the view transition animation. An elegant animation that triggers when navigating a site."
 pubDate: "2024-06-23"
 author: "Alberto Ramos"
 image: "/blog/astro.webp"
