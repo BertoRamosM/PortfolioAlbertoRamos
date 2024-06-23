@@ -9,7 +9,6 @@ export default defineConfig({
     host: "localhost",
   },
   integrations: [tailwind()],
-  output: 'server',
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es", "ca", "fr"],
