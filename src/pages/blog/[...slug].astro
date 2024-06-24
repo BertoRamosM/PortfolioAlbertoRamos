@@ -68,16 +68,16 @@ const { Content } = await entry.render();
         <span class="flex gap-2 pb-1"><Clock />{entry.data.time}</span>
         <Tags tags={entry.data.tags} />
       </div>
-      <div class="w-full flex items-center pt-12">
+      <div class="w-full flex items-center pt-12 justify-center">
         <Image
           src={entry.data.image}
           alt={entry.data.title}
           height={200}
-          width={500}
-          class="cover rounded-xl"
+          width={700}
+          class="cover rounded-xl w-full max-w-full"
         />
       </div>
-      <div class="prose pt-12 pb-24">
+      <div class="prose pt-12 pb-12">
         <Content />
       </div>
       <!-- end -->
@@ -131,6 +131,12 @@ const { Content } = await entry.render();
     }
     .accent {
       color: rgb(171, 39, 171);
+    }
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    height: auto;
     }
   </style>
 </BlogLayout>

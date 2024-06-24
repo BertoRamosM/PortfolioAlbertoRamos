@@ -1,14 +1,7 @@
 ---
-interface Props {
-  children: any;
-  description: string;
-  title: string;
-  entry: any;
-}
-import { Image } from "astro:assets";
-import Clock from "../../../icons/Clock.astro";
 import BlogLayout from "../../../layouts/BlogLayout.astro";
-import Tags from "../../../blogComponents/Tags.astro";
+import BlogHero from "../../../blogComponents/BlogHero.astro";
+import BlogGallery from "../../../blogComponents/BlogGallery.astro";
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -17,94 +10,44 @@ export async function getStaticPaths() {
   const allBlogArticles: CollectionEntry<"blog">[] =
     await getCollection("blog");
 
-  return allBlogArticles.map((entry) => ({
+  const tags = new Set<string>();
+  allBlogArticles.forEach((article) => {
+    if (article.data.tags) {
+      article.data.tags.forEach((tag) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags).map((tag) => ({
     params: {
-      slug: entry.slug,
+      tag: tag,
     },
-    props: { entry },
+    props: { tag },
   }));
 }
 
-const { entry } = Astro.props;
+interface Props {
+  tag: string;
+}
 
-const { Content } = await entry.render();
+const { tag }: Props = Astro.props;
+
+const allArticles: CollectionEntry<"blog">[] = await getCollection("blog");
+
+const filteredArticles = allArticles.filter((article) =>
+  article.data.tags?.includes(tag)
+);
+
+const allBlogArticles = filteredArticles.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
 ---
 
 <BlogLayout
-  title=`${entry.data.title} - Blog Alberto Ramos - Web Developer`
-  description="Welcome to the blog of Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
+  title={`Blog Articles Tagged: ${tag} - Blog Alberto Ramos - Web Developer`}
+  description={`Blog articles tagged with ${tag} by Alberto Ramos, a dynamic web developer driven by a passion for learning and a collaborative spirit.`}
 >
-  <div class="">
-    <div class="pt-24">
-      <a
-        href="/blog"
-        class="flex justify-center items-center gap-8 border-2 rounded-full p-2 border-purple-500 hover:opacity-70 w-max"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M5 12l14 0"></path>
-          <path d="M5 12l6 6"></path>
-          <path d="M5 12l6 -6"></path>
-        </svg>
-      </a>
-    </div>
-
-    <div class="text-pretty">
-      <div class="flex flex-col pt-24 gap-1">
-        <h1 class="text-5xl font-black">{entry.data.title}</h1>
-        <h6 class="py-0">by {entry.data.author}</h6>
-
-        <span class="flex gap-2 pb-1"><Clock />{entry.data.time}</span>
-        <Tags tags={entry.data.tags} />
-      </div>
-      <div class="w-full flex items-center pt-12">
-        <Image
-          src={entry.data.image}
-          alt={entry.data.title}
-          height={200}
-          width={500}
-          class="cover rounded-xl"
-        />
-      </div>
-      <div class="prose pt-12 pb-32">
-        <Content />
-      </div>
-      <!-- end -->
-    </div>
-  </div>
+  <BlogHero />
+  <BlogGallery allBlogArticles={allBlogArticles} />
 </BlogLayout>
-
-<style is:global>
-  p {
-    margin: 20px 0px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    margin: 20px 0px;
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    margin: 20px 0px;
-    font-size: 1.3rem;
-  }
-  .styled-link {
-    color: rgb(228, 158, 228);
-  }
-  .accent {
-    color: rgb(171, 39, 171);
-  }
-</style>
