@@ -2,13 +2,15 @@
 import BlogCard from "./BlogCard.astro";
 import BlogSearch from "./BlogSearch.astro";
 
-const { allBlogArticles } = Astro.props;
-console.log(allBlogArticles);
+const {allBlogArticles} = Astro.props
+
 ---
 
-<div
-  class="h-full grid grid-cols-1 gap-8 border-l-2 border-white/40 pl-4 pb-20"
->
-  <BlogSearch />
-  {allBlogArticles?.map((item: any) => <BlogCard article={item} />)}
+<div class="h-full grid grid-cols-1 gap-8 border-l-2 border-white/40 pl-4 pb-20">
+ <!--  <BlogSearch /> -->
+  {
+    allBlogArticles?.map((item:any) => (
+      <BlogCard article={item} />
+    ))
+  }
 </div>

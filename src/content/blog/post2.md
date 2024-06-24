@@ -1,7 +1,7 @@
 ---
 title: "View Tranfeesitions"
 desc: "Introducefefing the view transition animation. An efeflegant animation that triggers when navigating a site."
-pubDate: "2024-06-21"
+pubDate: "2024-06-17"
 author: "Alberto Ramos"
 image: "/blog/astro.webp"
 tags: ["polla", "lol", "Framework"]
