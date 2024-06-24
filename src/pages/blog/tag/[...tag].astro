@@ -6,9 +6,9 @@ interface Props {
   entry: any;
 }
 import { Image } from "astro:assets";
-import Clock from "../../icons/Clock.astro";
-import BlogLayout from "../../layouts/BlogLayout.astro";
-import Tags from "../../blogComponents/Tags.astro";
+import Clock from "../../../icons/Clock.astro";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import Tags from "../../../blogComponents/Tags.astro";
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -77,60 +77,34 @@ const { Content } = await entry.render();
           class="cover rounded-xl"
         />
       </div>
-      <div class="prose pt-12 pb-24">
+      <div class="prose pt-12 pb-32">
         <Content />
       </div>
       <!-- end -->
     </div>
-    <div class="">
-      <div class="">
-        <a
-          href="/blog"
-          class="flex justify-center items-center gap-8 border-2 rounded-full p-2 border-purple-500 hover:opacity-70 w-max"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 12l14 0"></path>
-            <path d="M5 12l6 6"></path>
-            <path d="M5 12l6 -6"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
   </div>
-
-  <style is:global>
-    p {
-      margin: 20px 0px;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      margin: 20px 0px;
-      font-size: 1.6rem;
-    }
-
-    h3 {
-      margin: 20px 0px;
-      font-size: 1.3rem;
-    }
-    .styled-link {
-      color: rgb(228, 158, 228);
-    }
-    .accent {
-      color: rgb(171, 39, 171);
-    }
-  </style>
 </BlogLayout>
+
+<style is:global>
+  p {
+    margin: 20px 0px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 20px 0px;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    margin: 20px 0px;
+    font-size: 1.3rem;
+  }
+  .styled-link {
+    color: rgb(228, 158, 228);
+  }
+  .accent {
+    color: rgb(171, 39, 171);
+  }
+</style>
