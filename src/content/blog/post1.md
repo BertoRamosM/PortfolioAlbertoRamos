@@ -1,4 +1,5 @@
 ---
+id: 1
 title: "View Transitions"
 desc: "Introducing the view transition animation. An elegant animation that triggers when navigating a site."
 pubDate: "2024-06-23"
