@@ -48,10 +48,12 @@ const allBlogArticles = filteredArticles.sort((a, b) => {
   title={`Blog Articles Tagged: ${tag} - Blog Alberto Ramos - Web Developer`}
   description={`Blog articles tagged with ${tag} by Alberto Ramos, a dynamic web developer driven by a passion for learning and a collaborative spirit.`}
 >
+
     <a
       href="/blog"
       class="mt-48 flex justify-center items-center gap-2 border-2 rounded-full p-2 ml-4 border-purple-500 hover:opacity-70 w-max"
     >
+   
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -71,5 +73,7 @@ const allBlogArticles = filteredArticles.sort((a, b) => {
       </svg>
       Show all articles
     </a>
+     <h1 class="ml-4 mt-4 text-2xl">Showing by tag #{tag}</h1>
   <BlogGallery allBlogArticles={allBlogArticles} client:load/>
+  
 </BlogLayout>
