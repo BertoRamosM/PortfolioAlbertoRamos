@@ -1,74 +1,25 @@
 ---
 id: 2
-title: "View Tranfeesitions"
-desc: "Introducefefing the view transition animation. An efeflegant animation that triggers when navigating a site."
-pubDate: "2024-06-17"
+title: "The Beautiful Ugliness of Tailwind"
+desc: "Exploring the unattractive syntax of Tailwind CSS and its powerful utility"
+pubDate: "2024-06-25"
 author: "Alberto Ramos"
-image: "/blog/astro.webp"
-tags: ["test", "lol", "Framework"]
-time: "5 min"
-slug: "jejejlol"
+image: "/blog/tailwind.webp"
+tags: ["Tailwind", "CSS", "Framework"]
+time: "7 min"
+slug: "tailwind-power"
 ---
 
-# What are the View Transitions?
-I know. You have spent the last minutes navigating my portfolio and my blog, and you are wondering: "What are those seamless animations between pages?"
+## The Aesthetics of Tailwind Classes
+When reading developer opinion about tailwind, it's often criticized by its amount of classes one after another, the ugliness of them and how confusing they look when looking at code written with it. Just overwhelming at first
 <br>
-Well, they are called "View Transitions" are they are so easy to implement!
+But if so, why there are many big and small projects using it?
 
-## How it works?
-Astro provides a <viewTransitions /> component that can be added to the head of our page or its layout, and it will control how the page navigation looks. Of course it is customizable.
-<br>
-Even thought the default animation (the one I am using for this website) It's already very elegant, specially in SPA (single page applications).
-<br>
-Here a basic example of the component using his default behaviour:
+## The Power Behind the "Ugliness"
+The answer it's experience. Once you get use to this ugliness, Tailwind becomes powerfull by its utility-first approach and consistency. By providing those 'ready-to-use' classes, it eliminates the need for (also extremely confusing) CSS classes, speeds up development, and ensures a uniform design across projects. 
 
 
 ```html
----
-import { ViewTransitions } from 'astro:transitions';
----
-<html lang="en">
-  <head>
-    <title>My Homepage</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <h1>Welcome to my website!</h1>
-  </body>
-</html>
-
-```
-## Naming transitions
-By providing a name to the transition, we can also link two elements that are shared between pages to create some news animations.
-
-### Look at those items in different pages:
-```html
-<MyVideo controls="" autoplay="" transition:name="media-play" transition:persist />
-
-```
-
-```html
-<Video controls="" autoplay="" transition:name="media-play" transition:persist />
-```
-
-## Animations
-The animations that are currently supported are: fade, slide and initial, and we can add additional values, such as duration so we can combine them easily to create a fully animated website.
-```html
----
-import { fade } from 'astro:transitions';
----
-
-<header transition:animate={fade({ duration: '0.4s' })}>
-
-```
-
-## Conclusion
-As you can see with very few lines of code, we can create a very dynamic website that will please all of our users. 
-<br>
-I wish we could use those view transition in more JS frameworks, hopefully soon!
-<br>
-Check the official documentation of Astro for more information.
-<br>
-<span class="styled-link">https://docs.astro.build/en/guides/view-transitions/</span>
-
-
+<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 md:p-8 lg:p-10 mb-4">
+  ```
+##### Example of Tailwind classes applied to a div

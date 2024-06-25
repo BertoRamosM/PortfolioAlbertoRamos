@@ -1,8 +1,8 @@
 ---
 id: 1
-title: "View Transitions"
+title: "The Power of View Transitions"
 desc: "Introducing the view transition animation. An elegant animation that triggers when navigating a site."
-pubDate: "2024-06-23"
+pubDate: "2024-06-21"
 author: "Alberto Ramos"
 image: "/blog/astro.webp"
 tags: ["Astro", "Animations", "Framework"]
