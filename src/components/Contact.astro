@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="dark:bg-gray-900">
+<section class="bg-transparent">
   <div class="py-8 lg:py-12 px-4 mx-auto max-w-screen-md">
     <form
       name="contact"
@@ -26,7 +26,7 @@ const t = useTranslations(lang);
       <div>
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-purple-800 dark:text-purple-400"
         >
           {t("contact.1")}
         </label>
@@ -34,7 +34,7 @@ const t = useTranslations(lang);
           name="email"
           type="email"
           id="email"
-          class="shadow-sm bg-purple-900/10 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 border-b border-slate-500 glass active:border-none"
+          class="shadow-sm bg-purple-900/10 dark:text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 border-b border-slate-500 glass active:border-none"
           placeholder={t("contact.email")}
           required
         />
@@ -42,7 +42,7 @@ const t = useTranslations(lang);
       <div>
         <label
           for="subject"
-          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-purple-800 dark:text-purple-400"
         >
           {t("contact.2")}
         </label>
@@ -50,7 +50,7 @@ const t = useTranslations(lang);
           name="subject"
           type="text"
           id="subject"
-          class="shadow-sm bg-purple-900/10 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 border-b border-slate-500 glass"
+          class="shadow-sm bg-purple-900/10 dark:text-white text-sm rounded-lg focus:ring-red-100 focus:border-red-100 block w-full p-2.5 border-b border-slate-500 glass"
           placeholder={t("contact.3")}
           required
         />
@@ -58,7 +58,7 @@ const t = useTranslations(lang);
       <div class="sm:col-span-2">
         <label
           for="message"
-          class="block mb-2 text-sm font-medium text-white dark:text-gray-300"
+          class="block mb-2 text-sm font-medium text-purple-800 dark:text-purple-400"
         >
           {t("contact.4")}
         </label>
@@ -66,13 +66,13 @@ const t = useTranslations(lang);
           name="message"
           id="message"
           rows="6"
-          class="shadow-sm bg-purple-900/10 text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 border-b border-slate-500 glass"
+          class="shadow-sm bg-purple-900/10 dark:text-white text-sm rounded-lg focus:ring-yellow-100 focus:border-yellow-100 block w-full p-2.5 border-b border-slate-500 glass"
           placeholder={t("contact.5")}></textarea>
       </div>
       <button
         type="submit"
         class="rounded-full border border-white/10 gap-x-3
-  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 hover:text-purple-300 transition flex item-center justify-center border-purple-300 glass"
+  py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 hover:text-purple-400 transition flex item-center justify-center border-purple-400 glass font-bold"
       >
         {t("contact.6")}
       </button>

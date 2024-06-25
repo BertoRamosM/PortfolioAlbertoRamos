@@ -18,49 +18,42 @@ import ZustandIcon from "../icons/ZustandIcon.astro";
 const TECHS = {
   REACT: {
     name: "React",
-    class: "bg-purple-900 text-white border-2 border-purple-400",
     icon: ReactIcon,
     link: "https://react.dev/",
   },
   STYLEDCOMPONENTS: {
     name: "StyledC",
-    class: "bg-pink-600 text-white text border-2 border-pink-700",
+    
     icon: StylesComponentsIcon,
     link: "https://styled-components.com/",
   },
   ASTRO: {
     name: "Astro",
-    class: "background-black text-white border-2 border-orange-600",
     icon: Astroicon,
     link: "https://astro.build/",
   },
   TAILWIND: {
     name: "Tailwind",
-    class: "bg-gray-600 text-white border-2 border-blue-500 ",
     icon: TailwindIcon,
     link: "https://tailwindcss.com/",
   },
   MaterialUI: {
     name: "MaterialUI",
-    class: "bg-gray-800 text-[#73bcf6] border-2 border-blue-500 ",
     icon: MaterialUI,
     link: "https://mui.com/",
   },
   TypeScript: {
     name: "TypeScript",
-    class: "bg-white text-white border-2 border-blue-500 ",
     icon: TypeScript,
     link: "https://www.typescriptlang.org/",
   },
   Redux: {
     name: "Redux",
-    class: "bg-purple-900 text-white border-2 border-purple-400 ",
     icon: ReduxIcon,
     link: "https://redux-toolkit.js.org/",
   },
   Zustand: {
-    name: "Zustand",
-    class: "bg-red-600 text-white border-2 border-purple-400 ",
+    name: "Zustand",  
     icon: ZustandIcon,
     link: "https://zustand-demo.pmnd.rs/",
   },
@@ -132,9 +125,9 @@ const PROJECTS = [
       <>
         <article class="pb-14 pt-14 ">
           <a href={link} target="_blank">
-            <h3 class="text-3xl font-semibold text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
+            <h3 class="text-3xl font-semibold text-red-500 dark:text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
               {title}
-              <span class="text-purple-300 text-2xl">{subtitle}</span>
+              <span class="text-purple-800 dark:text-purple-400 text-2xl">{subtitle}</span>
             </h3>
           </a>
           <p class="text-m mb-4 text-pretty">{description}</p>
@@ -144,7 +137,7 @@ const PROJECTS = [
                 <a
                   href={tag.link}
                   target="_blank"
-                  class={`${tag.class} flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass hover:text-purple-300`}
+                  class=" flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-200 ease-in-out glass hover:text-purple-300"
                 >
                   {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 

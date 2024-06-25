@@ -18,7 +18,7 @@ const BlogSearch = ({setSearch, search}) => {
           type="text"
           id="query"
           name="query"
-          className="py-2 pl-10 w-[100%] sm:w-full pr-4 rounded-xl border-2 border-purple-400/20 bg-transparent text-white focus:outline-none"
+          className="py-2 pl-10 w-[100%] sm:w-full pr-4 rounded-xl border-2 border-purple-400  dark:border-purple-400/20 bg-transparent dark:text-white focus:outline-none"
           placeholder="Search by title"
           value={search}
           onChange={handleSearch}

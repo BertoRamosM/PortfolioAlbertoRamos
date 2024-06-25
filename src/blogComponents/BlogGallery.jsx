@@ -18,9 +18,11 @@ const BlogGallery = ({ allBlogArticles }) => {
       <BlogSearch search={search} setSearch={setSearch} />
 
       {filteredArticles.length === 0 ? (
-        <div className=" h-full text-2xl mt-10">No results found. Try searching for something else.</div>
+        <div className=" h-full text-2xl mt-10">
+          No results found. Try searching for something else.
+        </div>
       ) : (
-        <div className="h-full grid grid-cols-1 gap-8 border-l-2 border-white/40 pl-4 pb-20">
+        <div className="h-full grid grid-cols-1 gap-8 border-l-2 border-black/40  dark:border-white/40 pl-4 pb-20">
           {filteredArticles.map((item) => (
             <BlogCard article={item} key={item.id} />
           ))}
