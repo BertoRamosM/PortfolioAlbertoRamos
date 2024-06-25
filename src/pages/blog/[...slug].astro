@@ -67,7 +67,9 @@ const { Content } = await entry.render();
         <h6 class="py-0">by {entry.data.author}</h6>
 
         <span class="flex gap-2 pb-1"><Clock />{entry.data.time}</span>
-        <Tags tags={entry.data.tags} />
+       <div class="tags-container" transition:name="article-tags">
+          <Tags tags={entry.data.tags} />
+        </div>
       </div>
       <div class="w-full flex items-center pt-12 justify-center">
         <Image

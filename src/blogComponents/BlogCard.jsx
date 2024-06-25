@@ -11,6 +11,10 @@ const BlogCard = ({ article }) => {
     if (title) {
       title.style.viewTransitionName = "article-title";
     }
+    const tags = document.querySelector(".tags-container");
+    if (tags) {
+      tags.style.viewTransitionName = "article-tags";
+    }
   }, []);
 
   return (
@@ -36,7 +40,9 @@ const BlogCard = ({ article }) => {
         <p className="text-gray-300 text-sm mb-4 px-2">
           {new Date(article.data.pubDate).toLocaleDateString()}
         </p>
-        <Tags tags={article.data.tags} />
+        <div className="tags-container">
+          <Tags tags={article.data.tags} />
+        </div>{" "}
         <p className="mt-4 text-white/80 mb-4">{article.data.desc}</p>
         <a
           href={`/blog/${article.slug}`}
