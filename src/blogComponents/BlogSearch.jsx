@@ -6,7 +6,6 @@ const BlogSearch = ({setSearch, search}) => {
   const handleSearch = (e) => {
     let searchValue = e.target.value;
     setSearch(searchValue)
-    console.log(searchValue);
   };
 
   return (
@@ -20,7 +19,7 @@ const BlogSearch = ({setSearch, search}) => {
           id="query"
           name="query"
           className="py-2 pl-10 w-[100%] sm:w-full pr-4 rounded-xl border-2 border-purple-400/20 bg-transparent text-white focus:outline-none"
-          placeholder="Search by title or subject"
+          placeholder="Search by title"
           value={search}
           onChange={handleSearch}
         />
@@ -28,7 +27,6 @@ const BlogSearch = ({setSearch, search}) => {
           <SearchIcon />
         </div>
       </div>
-      <div>{search}</div>
     </form>
   );
 };
