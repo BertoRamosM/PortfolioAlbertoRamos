@@ -9,7 +9,7 @@ const BlogSearch = ({setSearch, search}) => {
   };
 
   return (
-    <form className="relative mt-4 flex ml-8" id="search-form">
+    <form className="relative mt-4 flex ml-4" id="search-form">
       <label className="hidden" htmlFor="search-input">
         Search
       </label>
