@@ -6,7 +6,7 @@ pubDate: "2024-06-21"
 author: "Alberto Ramos"
 image: "/blog/astro.webp"
 tags: ["Astro", "Animations", "Framework"]
-time: "5 min"
+time: "3 min"
 slug: "view-transitions"
 ---
 
@@ -69,6 +69,6 @@ I wish we could use those view transition in more JS frameworks, hopefully soon!
 <br>
 Check the official documentation of Astro for more information.
 <br>
-<span class="styled-link">https://docs.astro.build/en/guides/view-transitions/</span>
+<span class="styled-link" href="https://docs.astro.build/en/guides/view-transitions/" target="_blank">Documentation</span>
 
 
