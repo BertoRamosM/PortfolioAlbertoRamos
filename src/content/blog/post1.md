@@ -11,14 +11,14 @@ slug: "view-transitions"
 ---
 
 # What are the View Transitions?
-I know. You have spent the last minutes navigating my portfolio and my blog, and you are wondering: "What are those seamless animations between pages?"
+I know. You have spent the last minutes navigating my portfolio and my blog, and you are wondering: "What are those seamless page transition animations?"
 <br>
-Well, they are called "View Transitions" are they are so easy to implement!
+Well, they are called "View Transitions" they are so easy to implement!
 
 ## How it works?
 Astro provides a <viewTransitions /> component that can be added to the head of our page or its layout, and it will control how the page navigation looks. Of course it is customizable.
 <br>
-Even thought the default animation (the one I am using for this website) It's already very elegant, specially in SPA (single page applications).
+Even though the default animation (the one I am using for this website) is already very elegant, especially in SPAs (single page applications).
 <br>
 Here a basic example of the component using his default behaviour:
 
