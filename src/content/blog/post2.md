@@ -5,7 +5,7 @@ desc: "Introducefefing the view transition animation. An efeflegant animation th
 pubDate: "2024-06-17"
 author: "Alberto Ramos"
 image: "/blog/astro.webp"
-tags: ["polla", "lol", "Framework"]
+tags: ["test", "lol", "Framework"]
 time: "5 min"
 slug: "jejejlol"
 ---
