@@ -31,7 +31,7 @@ const { Content } = await entry.render();
 ---
 
 <BlogLayout
-  title=`${entry.data.title} - Blog Alberto Ramos - Web Developer`
+  title={`${entry.data.title} - Blog Alberto Ramos - Web Developer`}
   description="Welcome to the blog of Alberto Ramos: a dynamic web developer driven by a passion for learning and a collaborative spirit. Web developer adept at crafting visually stunning and highly functional web applications."
 >
   <div class="">
@@ -62,7 +62,8 @@ const { Content } = await entry.render();
 
     <div class="text-pretty">
       <div class="flex flex-col pt-24 gap-1">
-        <h1 class="text-5xl font-black">{entry.data.title}</h1>
+        <h1 class="text-5xl font-black article-title" 
+         transition:name="article-title">{entry.data.title}</h1>
         <h6 class="py-0">by {entry.data.author}</h6>
 
         <span class="flex gap-2 pb-1"><Clock />{entry.data.time}</span>
@@ -74,7 +75,8 @@ const { Content } = await entry.render();
           alt={entry.data.title}
           height={200}
           width={700}
-          class="cover rounded-xl w-full max-w-full"
+          class="cover rounded-xl w-full max-w-full article-image"
+          transition:name="article-image"
         />
       </div>
       <div class="prose pt-12 pb-12">
@@ -136,7 +138,7 @@ const { Content } = await entry.render();
       width: 100%;
       height: auto;
       max-width: 100%;
-    height: auto;
+      height: auto;
     }
   </style>
 </BlogLayout>
