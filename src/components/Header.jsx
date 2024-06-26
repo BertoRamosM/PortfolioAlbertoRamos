@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
-
 import SunIcon from "../../src/icons/SunIcon";
 import MoonIcon from "../../src/icons/MoonIcon";
-
 import Spain from "../flags-icons/Spain";
 import Cat from "../flags-icons/Catalonia";
 import Uk from "../flags-icons/Uk";
 import France from "../flags-icons/France";
-
 import { darkMode, toggleDarkMode } from "../DarkStore";
-
 import ArrowDown from "../icons/ArrowDown.jsx";
 
 const Header = () => {
@@ -49,21 +45,19 @@ const Header = () => {
       updateTheme(false);
     }
 
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const header = document.getElementById("header");
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > lastScrollY) {
-          header?.classList.add("header-hidden");
-        } else {
-          header?.classList.remove("header-hidden");
-        }
-        lastScrollY = window.scrollY;
-      });
+      if (window.scrollY > lastScrollY) {
+        header?.classList.add("header-hidden");
+      } else {
+        header?.classList.remove("header-hidden");
+      }
+      lastScrollY = window.scrollY;
     };
 
-    handleScroll();
+    window.addEventListener("scroll", handleScroll);
 
     const unsubscribe = darkMode.subscribe((value) => {
       setIsDarkMode(value);
@@ -71,6 +65,7 @@ const Header = () => {
     });
 
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       unsubscribe();
     };
   }, []);
@@ -84,15 +79,13 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  const [openNavbar, setOpenNavbar] = useState(false)
-  const handleNavbar = () => {
-    setOpenNavbar(!openNavbar)
-  }
-
   return (
-    <header id="header" className="flex justify-center mx-auto w-max">
-      <nav className="flex flex-row justify-between items-center sm:gap-x-10 opacity-90 relative text-xs sm:text-lg">
-        <div className="flex gap-4 sm:gap-6 ">
+    <header
+      id="header"
+      className="fixed top-0 left-[5%] right-[5%] z-50 p-6 transition-transform duration-300 bg-purple-100 bg-opacity-10 backdrop-blur-lg backdrop-saturate-180 border border-white border-opacity-10 rounded-lg max-w-screen-xl mx-auto w-max"
+    >
+      <nav className="flex flex-row justify-between items-center gap-x-10 opacity-90 relative text-xs sm:text-lg">
+        <div className="flex gap-x-4 sm:gap-x-6">
           <a
             href="#projects"
             className="hover:underline hover:text-purple-400 nav-link font-semibold"
@@ -133,7 +126,7 @@ const Header = () => {
                 {languages.map((language) => (
                   <li key={language.name} className="mx-4 my-1 font-semibold">
                     <a href={`/${language.name}`}>
-                      <language.component className="size-8" />
+                      <language.component className="w-8 h-8" />
                     </a>
                   </li>
                 ))}
@@ -147,57 +140,15 @@ const Header = () => {
           className="bg-transparent"
         >
           {isDarkMode ? (
-            <SunIcon className="theme-icon" />
+            <SunIcon className="w-4 h-4" />
           ) : (
-            <MoonIcon className="theme-icon" />
+            <MoonIcon className="w-4 h-4" />
           )}
         </button>
       </nav>
       <style jsx="true">{`
-        @media screen and (max-width: 560px) {
-          .nav-link {
-            font-size: 0.7rem;
-          }
-          header > * {
-            gap: 1rem;
-          }
-          @media screen and (max-width: 335px) {
-            .nav-link {
-              font-size: 0.6rem;
-            }
-          }
-        }
-        @media screen and (max-width: 450px) {
-          header > * {
-            gap: 0.7rem;
-          }
-        }
-
-        header {
-          position: fixed;
-          top: 0;
-          left: 5%;
-          right: 5%;
-          z-index: 50;
-          padding: 1.5rem;
-          transition: transform 0.3s ease;
-          background-color: rgba(169, 85, 247, 0.082);
-          backdrop-filter: blur(19px) saturate(180%);
-          border-radius: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.125);
-        }
-
         .header-hidden {
           transform: translateY(-115%);
-        }
-
-        .theme-icon {
-          width: 18px;
-          height: 18px;
-        }
-
-        .hidden {
-          display: none;
         }
       `}</style>
     </header>
