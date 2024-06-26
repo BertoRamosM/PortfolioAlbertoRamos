@@ -46,12 +46,7 @@ const LanguagesList = [
   .flag-container:hover .language-text {
     opacity: 1;
   }
-  @media (max-width: 768px) {
-    .icon {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-  }
+  
 
   .glass {
     background-color: transparent;
@@ -67,8 +62,8 @@ const LanguagesList = [
   >
     {
       LanguagesList.map((language) => (
-        <div class="p-2 flag-container glass">
-          <language.flag class="icon rounded-full" width={24} height={24}/>
+        <div class="p-2 flag-container glass rounded-full">
+          <language.flag  width={24} height={24}/>
          
           <div class="language-text text-red-500 dark:text-white icon-text text-lg font-bold">
             {language.name}
