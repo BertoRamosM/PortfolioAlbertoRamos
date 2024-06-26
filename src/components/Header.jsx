@@ -115,7 +115,7 @@ const Header = () => {
                     className="mx-4 my-1 font-semibold hover:scale-125 transition-transform duration-100 ease-in-out"
                   >
                     <a href={`/${language.name}`}>
-                      <language.component className="w-8 h-8 " />
+                      <language.component height={20} width={20} />
                     </a>
                   </li>
                 ))}

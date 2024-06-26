@@ -1,12 +1,12 @@
 
 import React from 'react'
 
-const Catalonia = () => {
+const Catalonia = ({ width, height }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={width}
+      height={height}
       viewBox="0 0 512 512"
     >
       <mask id="circleFlagsEsCt0">
@@ -24,6 +24,6 @@ const Catalonia = () => {
       </g>
     </svg>
   );
-}
+};
 
 export default Catalonia
