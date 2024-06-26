@@ -80,19 +80,19 @@ const Header = () => {
           </a>
           <a
             href="#about"
-            className="hover:underline hover:text-purple-400 nav-link font-semibold"
+            className="hover:underline hover:text-purple-400 nav-link font-semibold border-l-2 border-l-black dark:border-l-white pl-1 sm:border-none sm:pl-0"
           >
             About
           </a>
           <a
             href="#contact"
-            className="hover:underline hover:text-purple-400 nav-link font-semibold"
+            className="hover:underline hover:text-purple-400 nav-link font-semibold border-l-2 pl-1 sm:border-none sm:pl-0 border-l-black dark:border-l-white "
           >
             Contact
           </a>
           <a
             href="/blog"
-            className="hover:underline hover:text-purple-400 nav-link font-semibold"
+            className="hover:underline hover:text-purple-400 nav-link font-semibold border-l-2 pl-1 sm:border-none sm:pl-0 border-l-black dark:border-l-white "
           >
             Blog
           </a>

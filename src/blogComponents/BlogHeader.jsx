@@ -51,9 +51,9 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed top-0 left-[5%] right-[5%] z-50 p-6 transition-transform duration-300 bg-purple-100 bg-opacity-10 backdrop-blur-lg backdrop-saturate-180 border border-white border-opacity-10 rounded-lg max-w-screen-xl mx-auto w-max"
+      className="fixed top-0 left-[5%] right-[5%] z-50 p-6 transition-transform duration-300 bg-purple-100 bg-opacity-10 backdrop-blur-lg backdrop-saturate-180 border border-white border-opacity-10 rounded-lg max-w-screen-xl mx-auto w-max "
     >
-      <nav className="flex flex-row justify-between items-center gap-x-10 opacity-90 relative text-xs sm:text-lg">
+      <nav className="flex flex-row justify-between items-center gap-x-10 opacity-90 relative sm:text-lg">
         <div className="flex gap-x-4 sm:gap-x-6">
           <a
             href="/"

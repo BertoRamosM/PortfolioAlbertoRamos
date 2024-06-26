@@ -26,6 +26,22 @@ const { currentLocale } = Astro;
     <ViewTransitions />
 
     
+     <style>
+    /* Ensure no flickering by setting default theme styles */
+    html.light, html.dark {
+      transition: none !important;
+    }
+  </style>
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
     <title>{title}</title>
   </head>
 
