@@ -3,7 +3,7 @@ import { atom } from "nanostores";
 const STORAGE_KEY = "theme";
 
 // Create an atom with a default value
-export const darkMode = atom("light");
+export const darkMode = atom("dark");
 
 // Function to get the initial theme from localStorage or system preference
 export const initializeTheme = () => {
