@@ -1,40 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useStore } from "@nanostores/react";
 import SunIcon from "../../src/icons/SunIcon";
 import MoonIcon from "../../src/icons/MoonIcon";
 
-import { darkMode, toggleDarkMode } from "../DarkStore";
-
-const STORAGE_KEY = "theme";
+import { darkMode, toggleDarkMode, initializeTheme } from "../DarkStore";
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const isDarkMode = useStore(darkMode);
 
   useEffect(() => {
+    // Initialize theme when the component is loaded on the client side
+    initializeTheme();
+
     const htmlElement = document.documentElement;
 
     const updateTheme = (isDark) => {
-      if (isDark) {
+      if (isDark === "dark") {
         htmlElement.classList.add("dark");
         htmlElement.classList.remove("light");
-        localStorage.setItem(STORAGE_KEY, "dark");
       } else {
         htmlElement.classList.remove("dark");
         htmlElement.classList.add("light");
-        localStorage.setItem(STORAGE_KEY, "light");
       }
     };
 
-    const storedTheme = localStorage.getItem(STORAGE_KEY);
-   
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (storedTheme === "dark" || (!storedTheme && prefersDarkMode.matches)) {
-      setIsDarkMode(true);
-      updateTheme(true);
-    } else {
-      setIsDarkMode(false);
-      updateTheme(false);
-    }
+    updateTheme(isDarkMode);
 
     const handleScroll = () => {
       const header = document.getElementById("header");
@@ -49,24 +39,13 @@ const Header = () => {
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", handleScroll);
 
-    const unsubscribe = darkMode.subscribe((value) => {
-      setIsDarkMode(value);
-      updateTheme(value);
-    });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      unsubscribe();
     };
-  }, []);
+  }, [isDarkMode]);
 
   const handleToggle = () => {
-    const newTheme = !isDarkMode ? "dark" : "light";
-    setIsDarkMode(!isDarkMode);
     toggleDarkMode();
-    localStorage.setItem(STORAGE_KEY, newTheme);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-    document.documentElement.classList.toggle("light", isDarkMode);
   };
 
   return (
@@ -88,7 +67,7 @@ const Header = () => {
           onClick={handleToggle}
           className="bg-transparent"
         >
-          {isDarkMode ? (
+          {isDarkMode === "dark" ? (
             <SunIcon className="w-4 h-4" />
           ) : (
             <MoonIcon className="w-4 h-4" />

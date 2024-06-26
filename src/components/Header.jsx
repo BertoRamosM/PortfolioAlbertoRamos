@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useStore } from "@nanostores/react";
 import SunIcon from "../../src/icons/SunIcon";
 import MoonIcon from "../../src/icons/MoonIcon";
 import Spain from "../flags-icons/Spain";
 import Cat from "../flags-icons/Catalonia";
 import Uk from "../flags-icons/Uk";
 import France from "../flags-icons/France";
-import { darkMode, toggleDarkMode } from "../DarkStore";
+import { darkMode, toggleDarkMode, initializeTheme } from "../DarkStore";
 import ArrowDown from "../icons/ArrowDown.jsx";
 
-const STORAGE_KEY = "theme";
-
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const isDarkMode = useStore(darkMode);
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
@@ -22,30 +21,22 @@ const Header = () => {
   ];
 
   useEffect(() => {
+    // Initialize theme when the component is loaded on the client side
+    initializeTheme();
+
     const htmlElement = document.documentElement;
 
     const updateTheme = (isDark) => {
-      if (isDark) {
+      if (isDark === "dark") {
         htmlElement.classList.add("dark");
         htmlElement.classList.remove("light");
-        localStorage.setItem(STORAGE_KEY, "dark");
       } else {
         htmlElement.classList.remove("dark");
         htmlElement.classList.add("light");
-        localStorage.setItem(STORAGE_KEY, "light");
       }
     };
 
-    const storedTheme = localStorage.getItem(STORAGE_KEY);
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (storedTheme === "dark" || (!storedTheme && prefersDarkMode.matches)) {
-      setIsDarkMode(true);
-      updateTheme(true);
-    } else {
-      setIsDarkMode(false);
-      updateTheme(false);
-    }
+    updateTheme(isDarkMode);
 
     let lastScrollY = window.scrollY;
 
@@ -61,24 +52,13 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    const unsubscribe = darkMode.subscribe((value) => {
-      setIsDarkMode(value);
-      updateTheme(value);
-    });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      unsubscribe();
     };
-  }, []);
+  }, [isDarkMode]);
 
   const handleToggle = () => {
-    const newTheme = !isDarkMode ? "dark" : "light";
-    setIsDarkMode(!isDarkMode);
     toggleDarkMode();
-    localStorage.setItem(STORAGE_KEY, newTheme);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-    document.documentElement.classList.toggle("light", isDarkMode);
   };
 
   const handleDropdownToggle = () => {
@@ -88,7 +68,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed top-0 sm:left-[5%] sm:right-[5%] z-50 p-6 transition-transform duration-300 bg-purple-100 bg-opacity-10 backdrop-blur-lg backdrop-saturate-180 border border-white border-opacity-10 rounded-lg max-w-screen-xl mx-auto sm:w-max w-full"
+      className="fixed top-0 sm:left-[5%] sm:right-[5%] z-50 p-6 transition-transform duration-300 bg-purple-100 bg-opacity-10 backdrop-blur-lg backdrop-saturate-180 border border-white border-opacity-10 sm:rounded-lg max-w-screen-xl mx-auto sm:w-max w-full"
     >
       <nav className="flex flex-row justify-between items-center gap-x-4 sm:gap-x-10 opacity-90 relative text-xs sm:text-lg">
         <div className="flex gap-x-2 sm:gap-x-6">
@@ -148,7 +128,7 @@ const Header = () => {
           onClick={handleToggle}
           className="bg-transparent"
         >
-          {isDarkMode ? (
+          {isDarkMode === "dark" ? (
             <SunIcon className="w-4 h-4" />
           ) : (
             <MoonIcon className="w-4 h-4" />
