@@ -4,7 +4,7 @@
   const Uk = ( {width, height} ) => {
     return (
       <svg
-        class="rounded-full"
+        className="rounded-full"
         xmlns="http://www.w3.org/2000/svg"
         width={width || 24}
         height={height || 24}

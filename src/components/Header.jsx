@@ -153,7 +153,7 @@ const Header = () => {
           )}
         </button>
       </nav>
-      <style jsx>{`
+      <style jsx="true">{`
         @media screen and (max-width: 560px) {
           .nav-link {
             font-size: 0.7rem;

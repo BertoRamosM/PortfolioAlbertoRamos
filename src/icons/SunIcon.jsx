@@ -7,14 +7,13 @@ const SunIcon = () => {
       width={24}
       height={24}
       id="sun-icon"
-      class="theme-icon hidden"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-sun"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
