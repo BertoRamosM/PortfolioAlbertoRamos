@@ -4,9 +4,10 @@ import MoonIcon from "../../src/icons/MoonIcon";
 
 import { darkMode, toggleDarkMode } from "../DarkStore";
 
-const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(darkMode.value);
+const STORAGE_KEY = "theme";
 
+const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const htmlElement = document.documentElement;
@@ -14,27 +15,26 @@ const Header = () => {
     const updateTheme = (isDark) => {
       if (isDark) {
         htmlElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
+        htmlElement.classList.remove("light");
+        localStorage.setItem(STORAGE_KEY, "dark");
       } else {
         htmlElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
+        htmlElement.classList.add("light");
+        localStorage.setItem(STORAGE_KEY, "light");
       }
     };
 
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      const isDark = storedTheme === "dark";
-      setIsDarkMode(isDark);
-      updateTheme(isDark);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    const storedTheme = localStorage.getItem(STORAGE_KEY);
+   
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (storedTheme === "dark" || (!storedTheme && prefersDarkMode.matches)) {
       setIsDarkMode(true);
       updateTheme(true);
     } else {
       setIsDarkMode(false);
       updateTheme(false);
     }
-
-    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
       const header = document.getElementById("header");
@@ -46,6 +46,7 @@ const Header = () => {
       lastScrollY = window.scrollY;
     };
 
+    let lastScrollY = window.scrollY;
     window.addEventListener("scroll", handleScroll);
 
     const unsubscribe = darkMode.subscribe((value) => {
@@ -60,11 +61,13 @@ const Header = () => {
   }, []);
 
   const handleToggle = () => {
-    toggleDarkMode();
+    const newTheme = !isDarkMode ? "dark" : "light";
     setIsDarkMode(!isDarkMode);
+    toggleDarkMode();
+    localStorage.setItem(STORAGE_KEY, newTheme);
+    document.documentElement.classList.toggle("dark", !isDarkMode);
+    document.documentElement.classList.toggle("light", isDarkMode);
   };
-
-
 
   return (
     <header
@@ -79,11 +82,7 @@ const Header = () => {
           >
             Portfolio
           </a>
-          
-          
         </div>
-
-        
         <button
           id="theme-toggle"
           onClick={handleToggle}

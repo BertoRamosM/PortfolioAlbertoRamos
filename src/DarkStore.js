@@ -1,7 +1,7 @@
 import { atom } from "nanostores";
 
-// Initialize the 'darkMode' store with a default value (e.g., false)
-export const darkMode = atom(true);
+
+export const darkMode = atom('dark');
 
 // Function to toggle the current state of 'darkMode'
 export function toggleDarkMode() {
