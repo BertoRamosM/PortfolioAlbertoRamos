@@ -4,10 +4,10 @@ import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-import Spain from "../flags-icons/Spain.astro";
-import Cat from "../flags-icons/Catalonia.astro";
-import Uk from "../flags-icons/Uk.astro";
-import France from "../flags-icons/France.astro";
+import Spain from "../flags-icons/Spain";
+import Cat from "../flags-icons/Catalonia";
+import Uk from "../flags-icons/Uk";
+import France from "../flags-icons/France";
 
 const LanguagesList = [
   { flag: Spain, name: t("lang.2") },

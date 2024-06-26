@@ -4,7 +4,7 @@ import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/onest";
 
 const { title, description } = Astro.props;
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.astro";
 
 interface Props {
@@ -28,7 +28,7 @@ const { currentLocale } = Astro;
     <title>{title}</title>
   </head>
 
-  <body class="relative h-full w-full bg-zinc-100 dark:bg-slate-950 text-slate-950 dark:text-white">
+  <body class="relative h-full w-full bg-zinc-200 dark:bg-slate-950 text-slate-950 dark:text-white">
     <div class="fixed inset-x-0 top-0 isolate z-[10] h-[50px]">
       <div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]">
       </div><div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]">
@@ -40,7 +40,7 @@ const { currentLocale } = Astro;
       </div>
     </div>
 
-    <Header />
+    <Header client:load/>
     <slot />
     <Footer />
     <div class="fixed inset-x-0 bottom-0 isolate z-[10] h-[100px]">

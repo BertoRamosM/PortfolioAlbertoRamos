@@ -3,6 +3,7 @@ import BlogLayout from "../../../layouts/BlogLayout.astro";
 import BlogHero from "../../../blogComponents/BlogHero.astro";
 import BlogGallery from "../../../blogComponents/BlogGallery";
 
+
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -49,6 +50,7 @@ const allBlogArticles = filteredArticles.sort((a, b) => {
   description={`Blog articles tagged with ${tag} by Alberto Ramos, a dynamic web developer driven by a passion for learning and a collaborative spirit.`}
 >
 
+
     <a
       href="/blog"
       class="mt-48 flex justify-center items-center gap-2 border-2 rounded-full p-2 ml-4 border-purple-500 hover:opacity-70 w-max"
@@ -60,7 +62,7 @@ const allBlogArticles = filteredArticles.sort((a, b) => {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="white"
+        stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
