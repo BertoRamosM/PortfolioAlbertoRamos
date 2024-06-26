@@ -1,11 +1,11 @@
  
 import React from 'react'
 
-const SunIcon = () => {
+const SunIcon = ({ width, height }) => {
   return (
     <svg
-      width={24}
-      height={24}
+      width={width}
+      height={height}
       id="sun-icon"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -21,7 +21,7 @@ const SunIcon = () => {
       <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
     </svg>
   );
-}
+};
 
 export default SunIcon
 

@@ -68,9 +68,9 @@ const Header = () => {
           className="bg-transparent"
         >
           {isDarkMode === "dark" ? (
-            <SunIcon className="w-4 h-4" />
+            <SunIcon height={24} width={24} />
           ) : (
-            <MoonIcon className="w-4 h-4" />
+            <MoonIcon height={24} width={24} />
           )}
         </button>
       </nav>
