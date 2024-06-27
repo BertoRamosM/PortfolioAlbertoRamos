@@ -2,11 +2,16 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import BlogHero from "../../blogComponents/BlogHero.astro";
 import BlogGallery from "../../blogComponents/BlogGallery.jsx";
-
+import Pagination from "../../blogComponents/Pagination.astro"
 
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+
+import {ARTICLES_PER_PAGE} from "../../constants.ts"
+console.log(ARTICLES_PER_PAGE)
+
+const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 
 
 const allArticles: CollectionEntry<"blog">[] = await getCollection("blog");
@@ -16,6 +21,8 @@ const allBlogArticles = allArticles.sort((a, b) => {
   const dateB = new Date(b.data.pubDate).getTime();
   return dateB - dateA;
 });
+
+const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE)
 ---
 
 <BlogLayout
@@ -25,4 +32,5 @@ const allBlogArticles = allArticles.sort((a, b) => {
  
   <BlogHero />
   <BlogGallery allBlogArticles={allBlogArticles} client:load/>
+  <Pagination currentPage={currentPage} totalPages={2} />
 </BlogLayout>

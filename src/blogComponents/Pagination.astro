@@ -1,0 +1,23 @@
+---
+const { currentPage, totalPages } = Astro.props;
+
+interface Props {
+  currentPage: number;
+  totalPages: number;
+}
+---
+
+<div class="flex justify-between mt-10 w-1/2 items-center m-auto">
+  <a 
+    href={currentPage > 1 ? `/blog?page=${currentPage - 1}` : '#'} 
+    class={`inline-block px-3 py-2 rounded-lg ${currentPage > 1 ? 'bg-purple-300 hover:bg-purple-600 hover:text-white dark:text-black dark:hover:text-white' : 'bg-gray-200 cursor-not-allowed'}`}
+  >
+    Previous
+  </a>
+  <a 
+    href={currentPage < totalPages ? `/blog?page=${currentPage + 1}` : '#'} 
+    class={`inline-block px-3 py-2 rounded-lg ${currentPage < totalPages ? 'bg-purple-300 hover:bg-purple-600 hover:text-white dark:text-black dark:hover:text-white' : 'bg-gray-200 cursor-not-allowed'}`}
+  >
+    Next
+  </a>
+</div>

@@ -24,7 +24,7 @@ const BlogCard = ({ article }) => {
           <h2 className="text-lg sm:text-2xl font-semibold mb-2 flex items-end border-b-2 border-purple-800 dark:border-purple-400 article-title">
             <a
               href={`/blog/${article.slug}`}
-              className="group-hover:text-purple-500 cursor-pointer transition-all duration-100"
+              className="group-hover:text-purple-800 dark:group-hover:text-purple-500 cursor-pointer transition-all duration-100"
             >
               {article.data.title}
             </a>
@@ -46,7 +46,7 @@ const BlogCard = ({ article }) => {
         <p className="mt-4 dark:text-white/80 mb-4">{article.data.desc}</p>
         <a
           href={`/blog/${article.slug}`}
-          className="text-purple-500 cursor-pointer mt-12 border-b-2 border-purple-800  dark:border-purple-400 pb-2"
+          className="text-purple-800 dark:text-purple-500 cursor-pointer mt-12 border-b-2 border-purple-800  dark:border-purple-400 pb-2"
         >
           Read More
         </a>
