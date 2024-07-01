@@ -12,16 +12,20 @@ import TailwindIcon from "../icons/TailwindIcon.astro";
 import TypeScriptIcon from "../icons/TypeScript.astro";
 import MaterialUI from "../icons/MaterialUI.astro";
 import ReduxIcon from "../icons/ReduxIcon.astro";
+import NextIcon from "../icons/NextJsIcon.astro";
+import PrismaIcon from "../icons/PrismaIcon.astro";
 
 const ICONS = [
   { icon: HtmlIcon, name: "HTML" },
   { icon: CssIcon, name: "CSS" },
   { icon: JavaScriptIcon, name: "JavaScript" },
   { icon: ReactIcon, name: "React" },
-  { icon: ReduxIcon, name: "Redux" },
   { icon: AstroIcon, name: "Astro" },
+  { icon: NextIcon, name: "NextJs" },
   { icon: TypeScriptIcon, name: "TypeScript" },
   { icon: TailwindIcon, name: "Tailwind CSS" },
+  { icon: ReduxIcon, name: "Redux" },
+  { icon: PrismaIcon, name: "Prisma" },
   { icon: SaasIcon, name: "Sass" },
   { icon: MaterialUI, name: "Material-UI" },
   { icon: StyledComponentsIcon, name: "Styled Components" },
@@ -54,7 +58,7 @@ const ICONS = [
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
+
     opacity: 0;
     transition: opacity 0.3s ease;
     font-family: "Roboto", sans-serif;
@@ -71,14 +75,12 @@ const ICONS = [
     }
 
     .icon-text {
-     
     }
   }
   .glass {
     background-color: transparent;
     backdrop-filter: blur(19px) saturate(180%);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+  
   }
 </style>
 

@@ -8,10 +8,9 @@ import Pagination from "../../blogComponents/Pagination.astro"
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-import {ARTICLES_PER_PAGE} from "../../constants.ts"
-console.log(ARTICLES_PER_PAGE)
+/* import {ARTICLES_PER_PAGE} from "../../constants.ts"
 
-const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
+const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1; */
 
 
 const allArticles: CollectionEntry<"blog">[] = await getCollection("blog");
@@ -22,7 +21,12 @@ const allBlogArticles = allArticles.sort((a, b) => {
   return dateB - dateA;
 });
 
-const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE)
+/* const initialPosts = await fetch('/api/posts?page=1').then(res => res.json()); */
+ 
+
+/* const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE)
+
+const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice((currentPage -1 ) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE) */
 ---
 
 <BlogLayout
@@ -32,5 +36,5 @@ const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE)
  
   <BlogHero />
   <BlogGallery allBlogArticles={allBlogArticles} client:load/>
-  <Pagination currentPage={currentPage} totalPages={2} />
+ <!--  <Pagination currentPage={currentPage} totalPages={totalPages} /> -->
 </BlogLayout>
