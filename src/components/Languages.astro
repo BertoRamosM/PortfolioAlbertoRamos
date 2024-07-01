@@ -34,7 +34,7 @@ const LanguagesList = [
 
   .language-text {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -62,10 +62,10 @@ const LanguagesList = [
   >
     {
       LanguagesList.map((language) => (
-        <div class="p-2 flag-container glass rounded-full">
+        <div class="flag-container rounded-full">
           <language.flag  width={24} height={24}/>
          
-          <div class="language-text text-red-500 dark:text-white icon-text text-lg font-bold">
+          <div class="language-text text-purple-700 dark:text-white icon-text text-lg font-bold">
             {language.name}
           </div>
         </div>
