@@ -14,6 +14,7 @@ import MaterialUI from "../icons/MaterialUI.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import ReduxIcon from "../icons/ReduxIcon.astro";
 import ZustandIcon from "../icons/ZustandIcon.astro";
+import NextJsIcon from "../icons/NextJsIcon.astro";
 
 const TECHS = {
   REACT: {
@@ -23,7 +24,7 @@ const TECHS = {
   },
   STYLEDCOMPONENTS: {
     name: "StyledC",
-    
+
     icon: StylesComponentsIcon,
     link: "https://styled-components.com/",
   },
@@ -53,9 +54,14 @@ const TECHS = {
     link: "https://redux-toolkit.js.org/",
   },
   Zustand: {
-    name: "Zustand",  
+    name: "Zustand",
     icon: ZustandIcon,
     link: "https://zustand-demo.pmnd.rs/",
+  },
+  NextJs: {
+    name: "NextJs",
+    icon: NextJsIcon,
+    link: "https://nextjs.org/",
   },
 };
 
@@ -87,6 +93,19 @@ const PROJECTS = [
     tags: [TECHS.REACT, TECHS.Redux, TECHS.STYLEDCOMPONENTS],
   },
   {
+    title: "Insert Coin",
+    subtitle: "",
+    description: t("proj.7"),
+    state: {
+      status: true,
+      name: t("proj.3.2"),
+    },
+    link: "https://insert-coin-tau.vercel.app/",
+    github: "https://github.com/BertoRamosM/Insert-Coin",
+    image: "/projects/insert.webp",
+    tags: [TECHS.REACT, TECHS.NextJs, TECHS.Zustand],
+  },
+  {
     title: "Quizzo ",
     subtitle: `| ${t("proj.4")}`,
     description: t("proj.5"),
@@ -98,20 +117,6 @@ const PROJECTS = [
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",
     tags: [TECHS.REACT, TECHS.TypeScript, TECHS.Zustand],
-  },
-  {
-    title: "Argent Bank ",
-    subtitle: "",
-    description: t("proj.7"),
-    state: {
-      status: true,
-      name: t("proj.3.2"),
-    },
-    link: undefined,
-    github:
-      "https://github.com/BertoRamosM/ocr-11-Argent-Bank/tree/main/ocrP11-ArgentBank/Argent-Bank",
-    image: "/projects/Argent.webp",
-    tags: [TECHS.REACT, TECHS.Redux],
   },
 ];
 ---
@@ -127,7 +132,9 @@ const PROJECTS = [
           <a href={link} target="_blank">
             <h3 class="text-3xl font-semibold text-red-500 dark:text-yellow-100 mb-2 hover:scale-105 transition-transform duration-200 ease-in-out">
               {title}
-              <span class="text-purple-800 dark:text-purple-400 text-2xl">{subtitle}</span>
+              <span class="text-purple-800 dark:text-purple-400 text-2xl">
+                {subtitle}
+              </span>
             </h3>
           </a>
           <p class="text-m mb-4 text-pretty">{description}</p>
