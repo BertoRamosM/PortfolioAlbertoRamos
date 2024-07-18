@@ -116,7 +116,7 @@ const PROJECTS = [
     link: "https://quizzo-berto.netlify.app/",
     github: "https://github.com/BertoRamosM/Quizzo",
     image: "/projects/quizzo.webp",
-    tags: [TECHS.REACT, TECHS.TypeScript, TECHS.Zustand],
+    tags: [TECHS.REACT, TECHS.TypeScript, TECHS.Zustand, TECHS.TAILWIND],
   },
 ];
 ---
@@ -144,7 +144,7 @@ const PROJECTS = [
                 <a
                   href={tag.link}
                   target="_blank"
-                  class=" flex items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-300 ease-in-out glass hover:text-purple-300"
+                  class=" flex flex-wrap items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-300 ease-in-out glass hover:text-purple-300"
                 >
                   {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 
@@ -159,7 +159,7 @@ const PROJECTS = [
                 loading="lazy"
                 src={image}
                 alt={`Screenshot from project ${title}`}
-                class="rounded shadow-2xl shadow-purple-500/30 hover:scale-110 transition-transform duration-1000 ease-in-out glass"
+                class="rounded shadow-2xl shadow-purple-500/30 hover:scale-110 transition-transform duration-[1000ms] ease-in-out glass"
               />
             </a>
             {state.status === false ? (
