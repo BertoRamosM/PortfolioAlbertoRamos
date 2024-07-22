@@ -4,12 +4,14 @@ import Github from "../icons/Github.astro";
 import Email from "../icons/Email.astro";
 import CVIcon from "../icons/CVIcon.astro";
 import Book from "../icons/Book.astro";
-import Uk from "../flags-icons/Uk"
+import Uk from "../flags-icons/Uk";
 
 import { getLangFromUrl, useTranslations } from "../src/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const langCV = lang.toUpperCase();
 ---
 
 <nav class="pt-8">
@@ -33,8 +35,8 @@ const t = useTranslations(lang);
         class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-400 item-center border-purple-300 glass"
       >
         <div class="flex items-center gap-2">
-        <Book class="size-6" />
-        Blog <Uk width={16} height={16}/>
+          <Book class="size-6" />
+          Blog <Uk width={16} height={16} />
         </div>
       </a>
 
@@ -66,8 +68,8 @@ const t = useTranslations(lang);
       </a>
 
       <a
-        href="https://raw.githubusercontent.com/BertoRamosM/CV2024/main/AlbertoRamosCV2024.pdf"
-        download="AlbertoRamosCV2024.pdf"
+        href=`https://raw.githubusercontent.com/BertoRamosM/CV2024/main/AlbertoRamosCV2024FR.pdf`
+        download=`AlbertoRamosCV2024FR.pdf`
         class="rounded-full border border-white/10 gap-x-3 py-2 px-3 bg-white/10 hover:scale-105 hover:bg-white/10 transition flex hover:text-purple-400 item-center border-purple-300 glass"
       >
         <CVIcon class="size-6" />
