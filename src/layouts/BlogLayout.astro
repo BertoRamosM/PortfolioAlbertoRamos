@@ -7,7 +7,7 @@ import "@fontsource-variable/onest";
 import { ViewTransitions } from "astro:transitions";
 
 import "@fontsource-variable/onest";
-import BlogHeader from "../blogComponents/BlogHeader.jsx"
+import BlogHeader from "../blogComponents/BlogHeader.jsx";
 import BlogFooter from "../blogComponents/BlogFooter.astro";
 
 const { title, description } = Astro.props;
@@ -30,29 +30,33 @@ const { currentLocale } = Astro;
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
 
-     <style>
-    /* Ensure no flickering by setting default theme styles */
-    html.light, html.dark {
-      transition: none !important;
-    }
-  </style>
-  <script>
-    (function() {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.add('light');
+    <style>
+      /* Ensure no flickering by setting default theme styles */
+      html.light,
+      html.dark {
+        transition: none !important;
       }
-    })();
-  </script>
+    </style>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (
+          theme === "dark" ||
+          (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
     <title>{title}</title>
   </head>
 
   <body
     class="relative h-full w-full bg-zinc-300 dark:bg-slate-950 text-slate-950 dark:text-white mx-auto lg:w-[740px] px-4 lg:px-0 scrollbar-webkit justify-center"
   >
-  <BlogHeader client:load/>
+    <BlogHeader client:load />
     <div class="fixed inset-x-0 top-0 isolate z-[10] h-[50px]">
       <div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[1px]">
       </div><div class="gradient-mask-b-0 absolute inset-0 backdrop-blur-[2px]">
@@ -63,7 +67,7 @@ const { currentLocale } = Astro;
       >
       </div>
     </div>
-  
+
     <slot />
     <BlogFooter />
     <div class="fixed inset-x-0 bottom-0 isolate z-[10] h-[100px]">
@@ -79,11 +83,11 @@ const { currentLocale } = Astro;
 
     <style is:global>
       :root {
-      
       }
-       html.light, html.dark {
-  transition: none !important;
-       }
+      html.light,
+      html.dark {
+        transition: none !important;
+      }
 
       html {
         font-family: "Onest Variable", system-ui, sans-serif;
@@ -95,6 +99,9 @@ const { currentLocale } = Astro;
         flex-direction: column;
         min-height: 100vh;
         color: white;
+        transition:
+          background-color 1s,
+          color 1s;
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -113,5 +120,3 @@ const { currentLocale } = Astro;
     </style>
   </body>
 </html>
-
-
