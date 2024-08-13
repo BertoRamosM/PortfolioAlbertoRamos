@@ -66,6 +66,9 @@ export const ui = {
     "social.1": `Available for new projects`,
     "recom.1": `Alberto is a student whose personal and professional qualities deserve to be highlighted.`,
     "recom.2": `In summary, he is a very interesting candidate who will undoubtedly bring significant added value to your company or project.`,
+    "proj.piplettes1": "My first professional full stack app",
+    "proj.piplettes2":
+      "Les Piplettes, a vibrant cultural association, has given me the exciting opportunity to develop their full stack web application. This project has been an incredible learning experience, where I’ve honed my skills in setting up and managing a MongoDB database, as well as bridging the gap between the back end and front end using the powerful Next.js framework. For styling, I’ve utilized Tailwind CSS to create a modern and responsive design. The project is still in progress, and I’m excited to see it evolve and come to life.",
   },
   es: {
     "header.education": "Educación",
@@ -126,6 +129,9 @@ export const ui = {
     "social.1": `Disponible para nuevos proyectos`,
     "recom.1": `Alberto es un estudiante cuyas cualidades personales y profesionales merecen ser destacadas.`,
     "recom.2": `En resumen, es un candidato muy interesante que sin duda aportará un valor añadido significativo a su empresa o proyecto.`,
+    "proj.piplettes1": "Mi primera aplicación full stack profesional",
+    "proj.piplettes2":
+      "Les Piplettes, una asociación cultural dinámica, me ha brindado la emocionante oportunidad de desarrollar su aplicación web full stack. Este proyecto ha sido una experiencia de aprendizaje increíble, donde he perfeccionado mis habilidades en la configuración y gestión de una base de datos con MongoDB, así como en la conexión entre el back end y el front end utilizando el potente framework Next.js. Para el estilo, he utilizado Tailwind CSS para crear un diseño moderno y receptivo. El proyecto aún está en progreso, y estoy emocionado de verlo evolucionar y cobrar vida.",
   },
   ca: {
     "header.education": "Educació",
@@ -186,6 +192,9 @@ export const ui = {
     "social.1": `Disponible per a nous projectes`,
     "recom.1": `L'Alberto és un estudiant les qualitats personals i professionals del qual mereixen ser destacades.`,
     "recom.2": `En resum, és un candidat molt interessant que sens dubte aportarà un valor afegit significatiu a la seva empresa o projecte.`,
+    "proj.piplettes1": "La meva primera aplicació full stack professional",
+    "proj.piplettes2":
+      "Les Piplettes, una associació cultural dinàmica, m'ha ofert l'oportunitat emocionant de desenvolupar la seva aplicació web full stack. Aquest projecte ha estat una experiència d'aprenentatge increïble, on he perfeccionat les meves habilitats en la configuració i gestió d'una base de dades amb MongoDB, així com en la connexió entre el back end i el front end utilitzant el potent framework Next.js. Per al disseny, he utilitzat Tailwind CSS per crear un disseny modern i responsiu. El projecte encara està en procés, i estic emocionat de veure'l evolucionar i prendre vida.",
   },
   fr: {
     "header.education": "Éducation",
@@ -246,5 +255,8 @@ export const ui = {
     "social.1": `Disponible pour de nouveaux projets`,
     "recom.1": `Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
     "recom.2": `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.`,
+    "proj.piplettes1": "Ma première application full stack professionnelle",
+    "proj.piplettes2":
+      "Les Piplettes, une association culturelle dynamique, m'a offert l'opportunité passionnante de développer leur application web full stack. Ce projet a été une expérience d'apprentissage incroyable, où j'ai perfectionné mes compétences dans la mise en place et la gestion d'une base de données MongoDB, ainsi que dans la connexion entre le back end et le front end en utilisant le puissant framework Next.js. Pour le style, j'ai utilisé Tailwind CSS pour créer un design moderne et réactif. Le projet est encore en cours, et je suis impatient de le voir évoluer et prendre vie.",
   },
 } as const;

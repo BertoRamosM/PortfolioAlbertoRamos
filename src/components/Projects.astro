@@ -15,6 +15,7 @@ import TypeScript from "../icons/TypeScript.astro";
 import ReduxIcon from "../icons/ReduxIcon.astro";
 import ZustandIcon from "../icons/ZustandIcon.astro";
 import NextJsIcon from "../icons/NextJsIcon.astro";
+import MongoIcon from "../icons/MongoIcon.astro";
 
 const TECHS = {
   REACT: {
@@ -63,9 +64,27 @@ const TECHS = {
     icon: NextJsIcon,
     link: "https://nextjs.org/",
   },
+  MongoDb: {
+    name: "MongoDB",
+    icon: MongoIcon,
+    link: "https://www.mongodb.com/",
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Les Piplettes de Granville",
+    subtitle: `| ${t("proj.piplettes1")}`,
+    description: t("proj.piplettes2"),
+    state: {
+      status: false,
+      name: t("proj.3.1"),
+    },
+    link: "https://piplettes.vercel.app/",
+    github: "https://github.com/BertoRamosM/Piplettes",
+    image: "/projects/piplettes.webp",
+    tags: [TECHS.NextJs, TECHS.MongoDb, TECHS.TAILWIND],
+  },
   {
     title: "Albert s'occupe de tout ",
     subtitle: `| ${t("proj.9")}`,
@@ -130,7 +149,7 @@ const PROJECTS = [
       <>
         <article class="pb-14 pt-14 ">
           <a href={link} target="_blank">
-            <h3 class="text-3xl font-semibold text-red-500 dark:text-yellow-100 mb-2 hover:opacity-75 transition-transform duration-200 ease-in-out">
+            <h3 class="text-3xl font-semibold text-red-500 dark:text-yellow-100 mb-2 transition-transform duration-200 ease-in-out">
               {title}
               <span class="text-purple-800 dark:text-purple-400 text-2xl">
                 {subtitle}
@@ -144,7 +163,7 @@ const PROJECTS = [
                 <a
                   href={tag.link}
                   target="_blank"
-                  class=" flex flex-wrap items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110 hover:opacity-90 transition-transform duration-300 ease-in-out glass hover:text-purple-300"
+                  class=" flex flex-wrap items-center justify-center gap-x-2 rounded-full text-[12px] sm:text-[16px] py-1 px-2  truncate hover:scale-110  transition-transform duration-300 ease-in-out glass "
                 >
                   {tag.icon ? <tag.icon class="size-4 truncate" /> : null}
 
