@@ -66,6 +66,10 @@ export const ui = {
     "social.1": `Available for new projects`,
     "recom.1": `Alberto is a student whose personal and professional qualities deserve to be highlighted.`,
     "recom.2": `In summary, he is a very interesting candidate who will undoubtedly bring significant added value to your company or project.`,
+    "recom.3":
+      "“Alberto understood our needs with great precision and created a website that far exceeds our expectations.",
+    "recom.4":
+      "Thanks to his professionalism, creativity, and attentiveness, our cultural association now has a platform that is both intuitive and dynamic, fostering community engagement. We highly recommend Alberto for any project of this kind.”",
     "proj.piplettes1": "My first professional full stack app",
     "proj.piplettes2":
       "Les Piplettes, a dynamic cultural association, gave me the exciting opportunity to develop their full-stack web application. This project has been an incredible learning experience, where I honed my skills in configuring and managing a MongoDB database, as well as connecting the back-end and front-end using the powerful Next.js framework. For the design, I used Tailwind CSS to create a modern and responsive style. Additionally, I integrated NextAuth for authentication, allowing the page administrator to log in securely and perform CRUD operations on events. The application is fully optimized for SEO, ensuring increased visibility on search engines through dynamic meta tags, effective URL management, and high performance. The project is still ongoing, and I am eager to see it evolve and come to life.",
@@ -129,6 +133,10 @@ export const ui = {
     "social.1": `Disponible para nuevos proyectos`,
     "recom.1": `Alberto es un estudiante cuyas cualidades personales y profesionales merecen ser destacadas.`,
     "recom.2": `En resumen, es un candidato muy interesante que sin duda aportará un valor añadido significativo a su empresa o proyecto.`,
+    "recom.3":
+      "“Alberto comprendió nuestras necesidades con gran precisión y realizó un sitio web que supera con creces nuestras expectativas.",
+    "recom.4":
+      "Gracias a su profesionalismo, creatividad y capacidad de escucha, nuestra asociación cultural cuenta ahora con una plataforma tanto intuitiva como dinámica, que fomenta la participación de nuestra comunidad. Recomendamos encarecidamente a Alberto para cualquier proyecto de este tipo.”",
     "proj.piplettes1": "Mi primera aplicación full stack profesional",
     "proj.piplettes2":
       "Les Piplettes, una asociación cultural dinámica, me ofreció la emocionante oportunidad de desarrollar su aplicación web full-stack. Este proyecto ha sido una experiencia de aprendizaje increíble, donde perfeccioné mis habilidades en la configuración y gestión de una base de datos MongoDB, así como en la conexión del back-end y el front-end utilizando el potente framework Next.js. Para el diseño, utilicé Tailwind CSS para crear un estilo moderno y responsive. Además, integré NextAuth para la autenticación, permitiendo al administrador de la página iniciar sesión de forma segura y realizar operaciones CRUD en los eventos. La aplicación está completamente optimizada para SEO, garantizando una mayor visibilidad en los motores de búsqueda mediante metaetiquetas dinámicas, una gestión eficaz de las URLs y un alto rendimiento. El proyecto aún está en desarrollo y estoy deseando verlo evolucionar y cobrar vida.",
@@ -192,6 +200,10 @@ export const ui = {
     "social.1": `Disponible per a nous projectes`,
     "recom.1": `L'Alberto és un estudiant les qualitats personals i professionals del qual mereixen ser destacades.`,
     "recom.2": `En resum, és un candidat molt interessant que sens dubte aportarà un valor afegit significatiu a la seva empresa o projecte.`,
+    "recom.3":
+      "“L'Alberto va entendre les nostres necessitats amb gran precisió i va crear un lloc web que supera amb escreix les nostres expectatives.",
+    "recom.4":
+      "Gràcies al seu professionalisme, creativitat i capacitat d'escolta, la nostra associació cultural disposa ara d'una plataforma alhora intuïtiva i dinàmica, afavorint la participació de la nostra comunitat. Recomanem molt l'Alberto per a qualsevol projecte d'aquest tipus.”",
     "proj.piplettes1": "La meva primera aplicació full stack professional",
     "proj.piplettes2":
       "Les Piplettes, una associació cultural dinàmica, em va oferir l’oportunitat emocionant de desenvolupar la seva aplicació web full-stack. Aquest projecte ha estat una experiència d’aprenentatge increïble, on he perfeccionat les meves habilitats en la configuració i gestió d’una base de dades MongoDB, així com en la connexió del back-end i el front-end utilitzant el potent framework Next.js. Per al disseny, he utilitzat Tailwind CSS per crear un estil modern i responsive. A més, he integrat NextAuth per a l’autenticació, permetent a l’administrador de la pàgina iniciar sessió de manera segura i realitzar operacions CRUD sobre els esdeveniments. L’aplicació està completament optimitzada per al SEO, garantint una major visibilitat als motors de cerca mitjançant metaetiquetes dinàmiques, una gestió eficaç de les URLs i un alt rendiment. El projecte encara està en desenvolupament, i tinc moltes ganes de veure’l evolucionar i prendre vida.",
@@ -255,6 +267,10 @@ export const ui = {
     "social.1": `Disponible pour de nouveaux projets`,
     "recom.1": `Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
     "recom.2": `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.`,
+    "recom.3":
+      "“Alberto  a su comprendre nos besoins avec une grande précision et a réalisé un site qui dépasse largement nos attentes.",
+    "recom.4":
+      "Grâce à son professionnalisme, sa créativité et son écoute, notre association culturelle dispose désormais d'une plateforme à la fois intuitive et dynamique, favorisant ainsi l'engagement de notre communauté. Nous recommandons vivement Alberto pour tout projet de ce type.”",
     "proj.piplettes1": "Ma première application full stack professionnelle",
     "proj.piplettes2":
       "Les Piplettes, une association culturelle dynamique, m'a offert l'opportunité passionnante de développer leur application web full stack. Ce projet a été une expérience d'apprentissage incroyable, où j'ai perfectionné mes compétences en configuration et gestion d'une base de données MongoDB, ainsi qu'en reliant le back-end et le front-end en utilisant le puissant framework Next.js. Pour le design, j'ai utilisé Tailwind CSS pour créer un style moderne et réactif. De plus, j'ai intégré NextAuth pour l'authentification, permettant à l'administrateur de la page de se connecter en toute sécurité et d'effectuer des opérations CRUD sur les événements. L'application est entièrement optimisée pour le SEO, garantissant une visibilité accrue sur les moteurs de recherche grâce à des balises méta dynamiques, une gestion efficace des URLs et une performance élevée. Le projet est encore en cours, et je suis impatient de le voir évoluer et prendre vie.",

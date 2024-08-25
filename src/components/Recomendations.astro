@@ -13,14 +13,15 @@ const RECOMENDATIONS = [
     title: "Open Class Rooms Tutor",
     email: "chevalier@chris-freelance.com",
   },
-  /*  {
-    picture: "/images/Chevalier.jpg",
-    name: "Chris Chevalier",
-    punch: `“Alberto est un étudiant dont les qualités personnelles et professionnelles méritent d'être soulignées.`,
-    review: `En résumé, est un candidat très intéressant qui apportera sans aucun doute une valeur ajoutée significative à votre entreprise ou à votre projet.”`,
-    title: "Open Class Rooms Tutor",
-    email: "chevalier@chris-freelance.com",
-  }, 
+  {
+    picture: "/images/piplettes.png",
+    name: "Les Piplettes de Granville",
+    punch: t("recom.3"),
+    review: t("recom.4"),
+    title: "Association Culturel",
+    email: "richard.francoise@orange.fr ",
+  },
+  /*
    {
     picture: "/images/Chevalier.jpg",
     name: "Chris Chevalier",
@@ -68,7 +69,7 @@ const RECOMENDATIONS = [
       ></path>
     </g>
     <path
-     style="fill:#6b21a8;"
+      style="fill:#6b21a8;"
       d="M13,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1  c-6.617,0-12,5.383-12,12C14,31.553,13.553,32,13,32z"
     ></path>
     <path
@@ -95,8 +96,12 @@ const RECOMENDATIONS = [
             />
             <div class="space-y-0.5 font-medium text-left rtl:text-right ms-3 text-red-500 dark:text-yellow-200">
               <div>{recomendation.name}</div>
-              <div class="text-sm text-purple-800 dark:text-purple-400">{recomendation.title}</div>
-              <div class="text-sm text-gray-800 dark:text-gray-400">{recomendation.email}</div>
+              <div class="text-sm text-purple-800 dark:text-purple-400">
+                {recomendation.title}
+              </div>
+              <div class="text-sm text-gray-800 dark:text-gray-400">
+                {recomendation.email}
+              </div>
             </div>
           </figcaption>
         </figure>
